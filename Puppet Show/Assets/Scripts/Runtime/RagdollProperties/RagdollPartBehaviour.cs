@@ -13,9 +13,28 @@ public class RagdollPartBehaviour : MonoBehaviour
 
     void Start()
     {
+        //This ensures that modifying the fields of strategies at runtime don't effect the asset.
+        movementStrategy = InstantiateStrategy(movementStrategy);
+        triggerStrategy = InstantiateStrategy(triggerStrategy);
+        effectStrategy = InstantiateStrategy(effectStrategy);
+
         movementStrategy?.Initialize(this.gameObject);
         triggerStrategy?.Initialize(this.gameObject);
         effectStrategy?.Initialize(this.gameObject);
+    }
+
+    //Clones a ScriptableObject asset, assigns the values from the original, and returns the clone instance.
+    private T InstantiateStrategy<T>(T original)
+        where T : ScriptableObject
+    {
+        T clone = null;
+        if(original != null)
+        {
+            string json = JsonUtility.ToJson(original);
+            clone = (T)ScriptableObject.CreateInstance(original.GetType());
+            JsonUtility.FromJsonOverwrite(json, clone);
+        }
+        return clone;
     }
 
     void Update(){
