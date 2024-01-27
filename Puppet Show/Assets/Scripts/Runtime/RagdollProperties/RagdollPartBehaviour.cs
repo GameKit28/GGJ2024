@@ -11,6 +11,14 @@ public class RagdollPartBehaviour : MonoBehaviour
     private float nextTickCountdown = 0f;
     private bool triggerCurrentlyMet = false;
 
+    void Start()
+    {
+        //This ensures that modifying the fields of strategies at runtime don't effect the asset.
+        if(movementStrategy != null) movementStrategy = (MovementStrategy)ScriptableObject.CreateInstance(movementStrategy.GetType());
+        if(triggerStrategy != null) triggerStrategy = (TriggerStrategy)ScriptableObject.CreateInstance(triggerStrategy.GetType());
+        if(effectStrategy != null) effectStrategy = (EffectStrategy)ScriptableObject.CreateInstance(effectStrategy.GetType());
+    }
+
     void Update(){
         //Perform our movement update.
         movementStrategy?.DoMovementUpdate(this.gameObject);
