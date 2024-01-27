@@ -13,10 +13,7 @@ public class RagdollPartBehaviour : MonoBehaviour
 
     void Start()
     {
-        //This ensures that modifying the fields of strategies at runtime don't effect the asset.
-        if(movementStrategy != null) movementStrategy = (MovementStrategy)ScriptableObject.CreateInstance(movementStrategy.GetType());
-        if(triggerStrategy != null) triggerStrategy = (TriggerStrategy)ScriptableObject.CreateInstance(triggerStrategy.GetType());
-        if(effectStrategy != null) effectStrategy = (EffectStrategy)ScriptableObject.CreateInstance(effectStrategy.GetType());
+        movementStrategy?.Initialize(this.gameObject);
     }
 
     void Update(){
