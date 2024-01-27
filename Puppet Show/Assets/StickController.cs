@@ -7,7 +7,9 @@ public class StickController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 stickPosition;
     [SerializeField] private float moveSpeed;
-   
+    [SerializeField] private float movementLeanAngle;
+    [SerializeField] private float maxLeanDistance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,9 @@ public class StickController : MonoBehaviour
         Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         stickPosition = Vector3.Lerp(stickPosition, targetPosition, Time.deltaTime * moveSpeed);
         rb.MovePosition(stickPosition);
+        float leanAngle = (Mathf.Clamp( targetPosition.x - stickPosition.x,-maxLeanDistance, maxLeanDistance) / maxLeanDistance) * movementLeanAngle;
+
+        rb.MoveRotation(Quaternion.Euler(new Vector3(0,0,leanAngle)));
     }
 
   

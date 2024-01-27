@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 426085411}
   - component: {fileID: 426085410}
   - component: {fileID: 426085409}
-  - component: {fileID: 426085408}
   - component: {fileID: 426085412}
+  - component: {fileID: 426085408}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  movementLeanAngle: 20
+  maxLeanDistance: 3
 --- !u!70 &426085409
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -254,9 +256,10 @@ Transform:
   m_LocalPosition: {x: 0.76, y: -2.77, z: 0}
   m_LocalScale: {x: 0.5400504, y: 1.72446, z: 0.67296}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 996269453}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &426085412
 Rigidbody2D:
@@ -517,14 +520,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996269449}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.78, y: -0.26, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.037033547, y: 1.4555281, z: 0}
+  m_LocalScale: {x: 1.8516791, y: 0.5798917, z: 1.4859725}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1373554117}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 426085411}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373554112
 GameObject:
@@ -729,7 +732,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577610820}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -2, z: 0}
+  m_LocalPosition: {x: 0.11, y: -2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -752,7 +755,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.00000008196985, y: 1.0000001}
-  m_ConnectedAnchor: {x: 0.03999972, y: -1.0000001}
+  m_ConnectedAnchor: {x: 0.10999984, y: -1.0399996}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
