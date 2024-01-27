@@ -8,7 +8,7 @@ public class Trigger_PointingRight : TriggerStrategy
 
         //get the angle of the GameObject
         float angle = gameObject.transform.rotation.eulerAngles.z;
-        if angle > 170 && angle < 190{
+        if (angle > 170f && angle < 190f){
             return true;
         }
 
