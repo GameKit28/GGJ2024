@@ -32,7 +32,6 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator Move()
     {
-        Debug.Log("Move");
         midJump = true;
         float floorHeight = transform.position.y;
         Vector2 velocity = moveVelocity;
