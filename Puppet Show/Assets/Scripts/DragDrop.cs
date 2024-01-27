@@ -15,7 +15,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
     }
-
+    private void Start()
+    {
+        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+    }
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("click down");
