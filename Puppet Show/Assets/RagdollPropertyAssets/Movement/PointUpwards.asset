@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PointUpwards
   m_EditorClassIdentifier: 
   strength: 25
-  targetAngle: 270
+  targetAngle: 0

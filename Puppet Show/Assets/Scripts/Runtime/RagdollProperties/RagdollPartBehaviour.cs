@@ -14,6 +14,8 @@ public class RagdollPartBehaviour : MonoBehaviour
     void Start()
     {
         movementStrategy?.Initialize(this.gameObject);
+        triggerStrategy?.Initialize(this.gameObject);
+        effectStrategy?.Initialize(this.gameObject);
     }
 
     void Update(){
