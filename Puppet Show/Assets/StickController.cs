@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody2D))]
 public class StickController : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -21,7 +21,7 @@ public class StickController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        stickPosition = Vector3.Lerp(stickPosition, targetPosition, Time.deltaTime * moveSpeed);
+        stickPosition = Vector3.Lerp(stickPosition, targetPosition, Time.fixedDeltaTime * moveSpeed);
         rb.MovePosition(stickPosition);
         float leanAngle = (Mathf.Clamp( targetPosition.x - stickPosition.x,-maxLeanDistance, maxLeanDistance) / maxLeanDistance) * movementLeanAngle;
 

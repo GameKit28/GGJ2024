@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamageable
 {
-    
+    [Header("Health Bars")]
     [SerializeField] private float intimidate;
     [SerializeField] private float disgust;
     [SerializeField] private float calm;
