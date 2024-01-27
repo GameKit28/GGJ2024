@@ -29,6 +29,7 @@ ExportedObj/
 *.opendb
 *.VC.db
 *.vscode
+*.vs
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
