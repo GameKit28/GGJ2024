@@ -4,14 +4,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private float movementMagnitude;
-    [SerializeField] private float moveTime;
+    [SerializeField] private Vector2 moveVelocity;
     [SerializeField] private float timeBetweenMovements;
     [SerializeField] private float timeBetweenMovementsVariability;
-    [SerializeField] private float jumpForce;
-    private float timeTillNextMovement;
+    [SerializeField] private float gravity;
     private float timer;
     private Rigidbody2D rb;
+    private bool midJump = false;
     private void Start()
     {
         rb= GetComponent<Rigidbody2D>();
@@ -19,56 +18,37 @@ public class EnemyMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        timer += Time.fixedDeltaTime;
-        if (timer >= timeTillNextMovement)
+        timer -= Time.fixedDeltaTime;
+        if (timer <= 0 && !midJump)
         {
             StartCoroutine(Move());
-            StartCoroutine(Jump());
-            SetUpNextMovement();
         }
     }
 
     private void SetUpNextMovement()
     {
-        timer = 0;
-        timeTillNextMovement = timeBetweenMovements + Random.Range(-timeBetweenMovementsVariability, timeBetweenMovementsVariability);
+        timer = timeBetweenMovements + Random.Range(-timeBetweenMovementsVariability, timeBetweenMovementsVariability);
     }
 
     private IEnumerator Move()
     {
-        timer = 0;
-        Vector3 distance = Vector3.zero;
-        Vector3 origin = transform.position;
-        while (timer < moveTime)
-        {
-            timer += Time.fixedDeltaTime;
-            distance = Vector3.Lerp(distance, new Vector3(movementMagnitude,0,0), Time.fixedDeltaTime * (1f / moveTime));
-            rb.MovePosition(origin - distance);
-            yield return new WaitForFixedUpdate();
-        }
-       
-    }
-    private IEnumerator Jump()
-    {
-        bool midJump = true;
-        float baseHeight = transform.position.y;
-        float height = 0;
-        Vector3 origin = transform.position;
-        float velocity = jumpForce;
-        float acceleration = -9.81f;
+        Debug.Log("Move");
+        midJump = true;
+        float floorHeight = transform.position.y;
+        Vector2 velocity = moveVelocity;
+        Vector2 acceleration = new Vector2(0, gravity);
         while (midJump)
         {
-            height += velocity * Time.fixedDeltaTime * (1f / moveTime);
-            velocity += acceleration * Time.fixedDeltaTime * (1f / moveTime);
-            Debug.Log(velocity);
-            rb.MovePosition(origin + new Vector3(0,height, 0));
-            if (transform.position.y < baseHeight)
+            rb.MovePosition(transform.position + (Vector3)velocity * Time.fixedDeltaTime);
+            velocity += acceleration * Time.fixedDeltaTime;
+            if(transform.position.y < floorHeight)
             {
-                rb.MovePosition(new Vector2(transform.position.x, baseHeight));
                 midJump = false;
+                rb.MovePosition(new Vector3(transform.position.x, floorHeight, 0));
+                SetUpNextMovement();
             }
             yield return new WaitForFixedUpdate();
-            
         }
+        
     }
 }
