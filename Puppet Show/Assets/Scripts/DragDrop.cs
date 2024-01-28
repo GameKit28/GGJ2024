@@ -5,15 +5,17 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private Canvas canvas;
+    private Canvas canvas;
 
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
+    private Vector2 initialPosition;
 
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
+        initialPosition = new Vector2(rectTransform.position.x, rectTransform.position.y);
     }
     private void Start()
     {
@@ -32,7 +34,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        if (!(eventData.pointerEnter != null && eventData.pointerEnter.tag == "Slot"))
+        {
+            rectTransform.position = initialPosition;
+        }
+        
         Debug.Log("drag end");
+
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
