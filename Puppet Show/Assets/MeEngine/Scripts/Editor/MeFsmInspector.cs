@@ -9,7 +9,7 @@ namespace MeEngine.FsmManagement
     /// <summary>
     /// Instructs the Inspector on how to draw MeFsms.
     /// </summary>
-    [CustomEditor(typeof(MeFsm), true)]
+    /*[CustomEditor(typeof(MeFsm), true)]
     class MeFsmInspector : Editor
     {
         //Recursively grab all the nested classes for ourselves and any base classes
@@ -40,14 +40,16 @@ namespace MeEngine.FsmManagement
                 ).ToList();
 
             //Where in our dropdown list are we currently?
-            int currentIndex = states.IndexOf(myTarget.StartingState);
+            int currentIndex = states.IndexOf(myTarget.StartingState.SystemType);
             if (currentIndex == -1) currentIndex = 0; //If nothing was found, default to the first item
 
             //Display a popup listing all valid states (as strings)
             currentIndex = EditorGUILayout.Popup("Starting State", currentIndex, states.Select(s => s.Name.ToString()).ToArray());
 
             //Set our starting state
-            myTarget.StartingState = states[currentIndex];
+            
+            myTarget.StartingState = new SerializableSystemType(states[currentIndex]);
+            Debug.Log("Starting State Set:" + myTarget.StartingState.Name);
             //---
 
             //Display our current state
@@ -60,5 +62,5 @@ namespace MeEngine.FsmManagement
                 EditorGUILayout.EndHorizontal();
             }
         }
-    }
+    }*/
 }

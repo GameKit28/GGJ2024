@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using TypeReferences;
+using System;
 
 namespace MeEngine.FsmManagement
 {
@@ -12,11 +12,12 @@ namespace MeEngine.FsmManagement
         public string CurrentStateName { get { if(CurrentState != null) { return CurrentState.GetType().Name; } else { return null; } } }
 
         //Used for swapping states
-        private SerializableType NextStateType;
+        private SerializableSystemType NextStateType;
         private bool isExitingState = false;
 
         //This is set via a dropdown in the inspector. Will be the first state we enter unless otherwise specified.
-        public SerializableType StartingState;
+        [SerializeField]
+        public string StartingState;
 
         protected virtual void Start() { }
 
@@ -53,7 +54,13 @@ namespace MeEngine.FsmManagement
             //}
 
             isExitingState = true;
-            NextStateType = nextStateType;
+            NextStateType = new SerializableSystemType(nextStateType);
+        }
+
+        protected internal void _SwapState(string nextStateName){
+            Type nextStateType = Type.GetType(nextStateName);
+            if(nextStateType == null) throw new Exception($"Type could not be determined from provided string {nextStateName}.");
+            _SwapState(nextStateType);
         }
 
         /// <summary>
@@ -109,7 +116,7 @@ namespace MeEngine.FsmManagement
             if (NextStateType != null)
             {
                 //Swap State
-                CurrentState = (MeFsmStateBase)gameObject.AddComponent(NextStateType.Type);
+                CurrentState = (MeFsmStateBase)gameObject.AddComponent(NextStateType.SystemType);
                 NextStateType = null;
 
                 //Call our new state's EnterState() function
