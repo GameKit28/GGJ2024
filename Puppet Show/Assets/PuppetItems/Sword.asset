@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   puppetComponentName: Sword
-  puppetComponentDescription: Sharp! Uh oh!
+  puppetComponentDescription: Intimidates 5 when pointing forwards
   bodyPart: 1
   sprite: {fileID: 21300000, guid: 17efdc2c68d4e1c4cb06b8b877c87b20, type: 3}
   validMovementBehaviours:

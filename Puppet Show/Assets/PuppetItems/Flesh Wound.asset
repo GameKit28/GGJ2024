@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flesh Wound
   m_EditorClassIdentifier: 
   puppetComponentName: Flesh Wound
-  puppetComponentDescription: 
+  puppetComponentDescription: Disgusts 20 when still
   bodyPart: 2
   sprite: {fileID: 21300000, guid: 7e356a8fbbc4f2645adc2e279b607855, type: 3}
   validMovementBehaviours:

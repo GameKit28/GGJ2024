@@ -102,5 +102,5 @@ MonoBehaviour:
   launchVelocityRange: 6
   launchAngle: 90
   launchAngleRandomness: 10
-  timeBetweenLaunchAttempt: 3.5
-  launchRate: 7
+  timeBetweenLaunchAttempt: 3
+  launchRate: 12

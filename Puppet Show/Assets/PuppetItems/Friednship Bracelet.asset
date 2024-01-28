@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Friednship Bracelet
   m_EditorClassIdentifier: 
   puppetComponentName: Friendship Bracelet
-  puppetComponentDescription: 
+  puppetComponentDescription: Calms 20 when still
   bodyPart: 2
   sprite: {fileID: 21300000, guid: 309ef5088d7ebab41a8d0fc3d4987f2d, type: 3}
   validMovementBehaviours:

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cba97ba7ec2f248a338659f4972557, type: 3}
   m_Name: Overclocked PC
   m_EditorClassIdentifier: 
-  puppetComponentName: Monocle
-  puppetComponentDescription: 
+  puppetComponentName: Overclocked PC
+  puppetComponentDescription: Irritates 1 each tick
   bodyPart: 0
   sprite: {fileID: 21300000, guid: a7f77a01db525c143bb127975046c865, type: 3}
   validMovementBehaviours:
   - {fileID: 11400000, guid: 0c0ee07000c9acd41a976d294c41ccdf, type: 2}
   validTriggerBehaviours:
-  - {fileID: 11400000, guid: 50d0bfb1258592649b5b91f558f8eb9b, type: 2}
+  - {fileID: 11400000, guid: ceab4cfc6d6cdcd44bc68d2b0165e910, type: 2}
   validEffectBehaviours:
-  - {fileID: 11400000, guid: 7cf61d2b68a57004a907087277c3326a, type: 2}
+  - {fileID: 11400000, guid: b3479eecce8260c49867f701141f9cad, type: 2}
   constantModifiers: []
   percentageModifiers: []

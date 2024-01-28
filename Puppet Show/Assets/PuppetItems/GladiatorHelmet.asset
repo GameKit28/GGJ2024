@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GladiatorHelmet
   m_EditorClassIdentifier: 
   puppetComponentName: Gladiator Helmet
-  puppetComponentDescription: For SPARTA!
+  puppetComponentDescription: intimidates 20 when pointing up
   bodyPart: 0
   sprite: {fileID: 21300000, guid: 02d9e178fc32d92458948c7ff5dcf2ea, type: 3}
   validMovementBehaviours:

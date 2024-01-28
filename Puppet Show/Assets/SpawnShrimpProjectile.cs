@@ -17,10 +17,13 @@ public class SpawnShrimpProjectiles : MonoBehaviour, IScalable
     private float timer;
     public float launchRate = 7;
 
+    private int bubbleNumber = 0;
+
     private bool start = false;
     public void Scale(float strength)
     {
         launchRate = launchRate * (launchRate / (strength * launchRate));
+        bubbleNumber = (int)(strength/4);
     }
 
     // Start is called before the first frame update
@@ -51,7 +54,7 @@ public class SpawnShrimpProjectiles : MonoBehaviour, IScalable
                 //spawn a collumn of between 6 and 12 bubbles in succession
 
                 //choose a random number of bubbles to spawn at y=0
-                int numberOfBubbles = Random.Range(6, 12);
+                int numberOfBubbles = Random.Range(6, 12 + bubbleNumber);
 
 
                 //choose a random integer between 0 and 100

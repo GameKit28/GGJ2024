@@ -10,10 +10,12 @@ public class Effect_ApplyTypeDamage : EffectStrategy
     EnemyHealth enemyHealth;
     GameObject[] particleIndicators;
 
-    public override void ActivateOnTick(GameObject gameObject)
+    bool enemyPresent = true;
+    bool particleEmitterPresent = true;
+    float modifiedDamage;
+
+    public override void Initialize(GameObject gameObject)
     {
-        bool enemyPresent = true;
-        bool particleEmitterPresent = true;
         if (enemyHealth == null)
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -26,6 +28,7 @@ public class Effect_ApplyTypeDamage : EffectStrategy
                 enemyPresent = false;
             }
         }
+
         if (particleIndicators == null)
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("ParticleEmitter");
@@ -38,10 +41,45 @@ public class Effect_ApplyTypeDamage : EffectStrategy
                 particleEmitterPresent = false;
             }
         }
+
+        if(Inventory.Instance != null)
+        {
+            float runningConstantMod = 0;
+            float runningMultiplierMod = 1f;
+            foreach(var itemPart in Inventory.Instance.itemByBodyParts){
+                //Const modifiers add
+                if(itemPart.Value.constantModifiers != null){
+                    foreach(var constMod in itemPart.Value.constantModifiers){
+                        if(constMod.damageType == this.damageType) {
+                            runningConstantMod += constMod.modifierValue;
+                        }
+                    }
+                }
+
+                //percentage Modifiers multiply
+                if(itemPart.Value.percentageModifiers != null){
+                    foreach(var constMod in itemPart.Value.percentageModifiers){
+                        if(constMod.damageType == this.damageType) {
+                            runningMultiplierMod *= constMod.modifierValue;
+                        }
+                    }
+                }
+            }
+            modifiedDamage = (damageAmount + runningConstantMod) * runningMultiplierMod;
+        }
+        else
+        {
+            modifiedDamage = damageAmount;
+        }
+    }
+
+    public override void ActivateOnTick(GameObject gameObject)
+    {
         if (enemyPresent)
         {
-            enemyHealth.DealDamage(damageAmount, damageType);
+            enemyHealth.DealDamage(modifiedDamage, damageType);
         }
+
         if (particleEmitterPresent)
         {
             string targetEmitterName = "";
@@ -65,7 +103,7 @@ public class Effect_ApplyTypeDamage : EffectStrategy
                     targetEmitterName = "irritateEmitter";
                     break;
             }
-            AudioSource.PlayClipAtPoint(damageSound, gameObject.transform.position);
+
             foreach (GameObject emitter in particleIndicators)
             {
                 if (emitter.name == targetEmitterName)
@@ -80,5 +118,7 @@ public class Effect_ApplyTypeDamage : EffectStrategy
             particleSystem.emission.SetBurst(0, new ParticleSystem.Burst(0, new ParticleSystem.MinMaxCurve(damageAmount)));
             particleSystem.Play();
         }
+        
+        if(damageSound != null) AudioSource.PlayClipAtPoint(damageSound, gameObject.transform.position);
     }
 }

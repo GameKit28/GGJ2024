@@ -20,6 +20,7 @@ public class SpawnStagProjectile : MonoBehaviour, IScalable
     public void Scale(float strength)
     {
         launchRate = launchRate * (launchRate / (strength * launchRate));
+        launchVelocity = launchVelocity + (strength * 0.1f);
     }
 
     // Start is called before the first frame update
