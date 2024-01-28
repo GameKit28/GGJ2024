@@ -24461,7 +24461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3047394618575013372, guid: b2a2ccb3b1d5b2d4ca8cd8532fd30b7b, type: 3}
       propertyPath: StartingState
-      value: FightMonsterState
+      value: GameStateFSM+FightMonsterState, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3272457173147951738, guid: b2a2ccb3b1d5b2d4ca8cd8532fd30b7b, type: 3}
       propertyPath: m_RootOrder
@@ -32129,7 +32129,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1953207531 stripped
 Rigidbody2D:
@@ -36786,7 +36786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7053297399488280631, guid: ac05bf8e758ead243a24abf5050e7c07, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7053297399488280631, guid: ac05bf8e758ead243a24abf5050e7c07, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36859,7 +36859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6886256334805551356, guid: 446e3cf332053234b83f25cdbd085bfe, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6886256334805551356, guid: 446e3cf332053234b83f25cdbd085bfe, type: 3}
       propertyPath: m_LocalPosition.x
