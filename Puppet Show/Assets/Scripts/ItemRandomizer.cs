@@ -1,12 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ItemRandomizer : MonoBehaviour
+public class ItemRandomizer : MonoBehaviour, IPointerEnterHandler
 {
     public GameObject itemPrefab;
 
     public List<ItemAsset> possibleItems;
-
+    //updating UI text variables
+    private GameObject nameUI;
+    private GameObject descriptionUI;
+    private TMPro.TextMeshProUGUI nameTextComponent;
+    private TMPro.TextMeshProUGUI descriptionTextComponent;
+    private string nameValue;
+    private string descriptionValue;
     private void Start()
     {
         int randomIndex = Random.Range(0, possibleItems.Count);
@@ -27,6 +34,14 @@ public class ItemRandomizer : MonoBehaviour
         
         myNewItem.transform.SetParent(transform.parent);
         componentInstance.ApplyPropertiesToUI(myNewItem);
+        //code for finding the text reference
+        nameValue = chosenItem.puppetComponentName;
+        descriptionValue = chosenItem.puppetComponentDescription;
+        nameUI = GameObject.FindWithTag("name");
+        descriptionUI = GameObject.FindWithTag("description");
+        nameTextComponent = nameUI.GetComponent<TMPro.TextMeshProUGUI>();
+        descriptionTextComponent = descriptionUI.GetComponent<TMPro.TextMeshProUGUI>();
+
     }
 
     private T GetRandom<T>(List<T> options){
@@ -37,5 +52,10 @@ public class ItemRandomizer : MonoBehaviour
         }else{
             return default(T);
         }
+    }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        nameTextComponent.text = nameValue;
+        descriptionTextComponent.text = descriptionValue;
     }
 }
