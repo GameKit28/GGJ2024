@@ -16,11 +16,6 @@ public partial class GameStateFSM : MeFsm
         }
     }
 
-    public void OnStartGameClick()
-    {
-        Debug.Log("Start Game Button Pressed");
-        Instance.SwapState<SelectEquipmentState>();
-    }
     public void OnEnemyDeath()
     {
 
