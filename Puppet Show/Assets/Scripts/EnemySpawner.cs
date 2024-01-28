@@ -8,20 +8,26 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private bool spawn;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject healthBarBannersPrefab;
-    [SerializeField] private EnemyBaseline enemy;
+
+    [SerializeField] private List<EnemyBaseline> enemies = new List<EnemyBaseline>();
     [SerializeField] private GameObject currentEnemy;
     [SerializeField] private GameObject currentHealthBars;
     [SerializeField] private GameObject currentProjectileSpawner;
+
     private void Update()
     {
         if(spawn)
         {
             spawn= false;
-            GenerateEnemy(strength);
+            //scale the strength of the enemy based on time elapsed since the game was launched
+
+            GenerateEnemy(strength + Time.timeSinceLevelLoad / 10f);
         }
     }
     public void GenerateEnemy(float strengthModifier)
     {
+        //randomize the enemy
+        EnemyBaseline enemy = enemies[Random.Range(0, enemies.Count)];
         if(currentEnemy != null)
         {
             Destroy(currentEnemy);

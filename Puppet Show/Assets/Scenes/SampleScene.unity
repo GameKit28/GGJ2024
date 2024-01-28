@@ -25270,7 +25270,10 @@ MonoBehaviour:
   spawn: 0
   enemyPrefab: {fileID: 5868569313265908190, guid: 11acbf28fa0d2554db547b9d56eef90d, type: 3}
   healthBarBannersPrefab: {fileID: 2227217256754281353, guid: b43a840f5e0a9414c8c7af0b558dce36, type: 3}
-  enemy: {fileID: 11400000, guid: 25e6c5066c8ae4641aaa2b6437b23d75, type: 2}
+  enemies:
+  - {fileID: 11400000, guid: 811eb453881cd8d4fbc760261f53b592, type: 2}
+  - {fileID: 11400000, guid: 4947cc9ec949f9441bed28fa7b82b7b7, type: 2}
+  - {fileID: 11400000, guid: 25e6c5066c8ae4641aaa2b6437b23d75, type: 2}
   currentEnemy: {fileID: 0}
   currentHealthBars: {fileID: 0}
   currentProjectileSpawner: {fileID: 0}
