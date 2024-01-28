@@ -24459,6 +24459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStateManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3047394618575013372, guid: b2a2ccb3b1d5b2d4ca8cd8532fd30b7b, type: 3}
+      propertyPath: StartingState
+      value: GameStateFSM+FightMonsterState, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3272457173147951738, guid: b2a2ccb3b1d5b2d4ca8cd8532fd30b7b, type: 3}
       propertyPath: m_RootOrder
       value: 6
