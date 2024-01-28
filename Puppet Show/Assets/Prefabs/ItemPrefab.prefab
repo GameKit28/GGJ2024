@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9bbdeb73a8101d24da6f7849ea25b620, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -291,17 +291,17 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: AddItem, Assembly-CSharp
-          m_MethodName: OnHover
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 1
+          m_CallState: 2
 --- !u!114 &3850155154545857791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,3 +343,4 @@ MonoBehaviour:
   id: 0
   sprite: {fileID: 0}
   bodyPart: 0
+  puppetComponentDescription: 

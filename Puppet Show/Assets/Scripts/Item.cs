@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
-public class PuppetComponents : MonoBehaviour, IBodyParts
+[System.Serializable]
+public class Item : IBodyParts
 {
 
     public string puppetComponentName;
@@ -17,6 +17,5 @@ public class PuppetComponents : MonoBehaviour, IBodyParts
         this.sprite = sprite;
         this.bodyPart = bodyPart;
 
-        gameObject.GetComponent<Image>().sprite = sprite;
     }
 }
