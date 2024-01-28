@@ -35,7 +35,7 @@ Transform:
   - {fileID: 8961809952818925115}
   - {fileID: 1532114234612661433}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8188697025511528330
 MonoBehaviour:
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2227217256754281353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9608f4abb143fb24985dfa64e41928ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d2e3e1c4f5c4bd468d29a10b98cee26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   intimidateBar: {fileID: 5764867873485946272}
@@ -55,7 +55,7 @@ MonoBehaviour:
   dazzleBar: {fileID: 562413813193776237}
   irritateBar: {fileID: 7200302833303396379}
   maxBannerHeight: 6
-  animationSpeed: 10
+  animationSpeed: 15
 --- !u!1 &4133363697126951315
 GameObject:
   m_ObjectHideFlags: 0
