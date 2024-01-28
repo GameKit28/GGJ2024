@@ -7,9 +7,9 @@ public class Item : IBodyParts
     public int id;
     public Sprite sprite;
     public IBodyParts.BodyPart bodyPart;
-    public int movementType
-    public int movementStrength
-    public int damage
+    public int movementType;
+    public int movementStrength;
+    public int damage;
     public string puppetComponentDescription;
 
 
@@ -23,7 +23,7 @@ public class Item : IBodyParts
         this.movementType = movementType;
         this.movementStrength = movementStrength;
         this.damage = damage;
-        
+
 
 
     }
