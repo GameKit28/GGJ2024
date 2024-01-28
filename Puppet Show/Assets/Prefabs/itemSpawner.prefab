@@ -97,12 +97,115 @@ MonoBehaviour:
     id: 1
     sprite: {fileID: 21300000, guid: 9bbdeb73a8101d24da6f7849ea25b620, type: 3}
     bodyPart: 3
-    puppetComponentDescription: this is a sword
-  - puppetComponentName: rose
+    puppetComponentDescription: Even the Stag Princess will recoil in terror when
+      held at swordpoint
+  - puppetComponentName: Rose
     id: 2
     sprite: {fileID: 21300000, guid: d68ce5efd22ccf34aa18b3ae827dcd13, type: 3}
     bodyPart: 3
-    puppetComponentDescription: this is a sword
+    puppetComponentDescription: The law of T'heth compels the Bidden to accept gifts
+      of still roses
+  - puppetComponentName: Tambourine
+    id: 3
+    sprite: {fileID: 21300000, guid: 80af69ddeeab6264591242501c9b331b, type: 3}
+    bodyPart: 3
+    puppetComponentDescription: Music is to the Listeners without Ears what Darkness
+      is to mortals
+  - puppetComponentName: Flat Soda
+    id: 4
+    sprite: {fileID: 21300000, guid: 0dfd04c0b713ec646896f7d2518ac061, type: 3}
+    bodyPart: 3
+    puppetComponentDescription: The least natural entity in the room
+  - puppetComponentName: Wand
+    id: 5
+    sprite: {fileID: 21300000, guid: 16803348cd20782409c4441cfeffb591, type: 3}
+    bodyPart: 3
+    puppetComponentDescription: 'All puppets are magical, so long as they never develop
+      a soul. That is why humans cannot see the Stag Princess'' Tracks. '
+  - puppetComponentName: Bracer
+    id: 6
+    sprite: {fileID: 21300000, guid: f9dd83b5582181b4fa4f0d1677242413, type: 3}
+    bodyPart: 2
+    puppetComponentDescription: 'Cold Metal rusts in the Stag Princess'' tracks. '
+  - puppetComponentName: Flesh Wound
+    id: 7
+    sprite: {fileID: 21300000, guid: 7e356a8fbbc4f2645adc2e279b607855, type: 3}
+    bodyPart: 2
+    puppetComponentDescription: And you wonder why the Bidden hunt you
+  - puppetComponentName: Friendship Bracelet
+    id: 8
+    sprite: {fileID: 21300000, guid: f9dd83b5582181b4fa4f0d1677242413, type: 3}
+    bodyPart: 2
+    puppetComponentDescription: The Young Gods cannot resist the power of an austere
+      ritual
+  - puppetComponentName: Radioactive Actuator
+    id: 9
+    sprite: {fileID: 21300000, guid: a6f684c949c226c45bc89a4c08ccc043, type: 3}
+    bodyPart: 2
+    puppetComponentDescription: The only magic men possess
+  - puppetComponentName: Wristwatch
+    id: 10
+    sprite: {fileID: 21300000, guid: edc29b3a6b24deb48b9b205d844ca243, type: 3}
+    bodyPart: 2
+    puppetComponentDescription: Time only began to pass six centuries ago in Nuremberg
+  - puppetComponentName: Powdered Wig
+    id: 11
+    sprite: {fileID: 21300000, guid: 90c993dbc24bb6343adc600d6dfadf28, type: 3}
+    bodyPart: 0
+    puppetComponentDescription: Wort has served on many juries, in many different
+      skins - but he has never been a judge
+  - puppetComponentName: Letterhead
+    id: 12
+    sprite: {fileID: 21300000, guid: a48c3e444e1ee4342ab4faae8c4db9ad, type: 3}
+    bodyPart: 0
+    puppetComponentDescription: The Stag Princess demands what cannot be sent over
+      e-mail
+  - puppetComponentName: Overclocked PC
+    id: 13
+    sprite: {fileID: 21300000, guid: 95286828c8815b943909945b61ed0f6c, type: 3}
+    bodyPart: 0
+    puppetComponentDescription: 'Whatever men waste with reckless abandon, Wort recycles. '
+  - puppetComponentName: Hopilite Plume
+    id: 14
+    sprite: {fileID: 21300000, guid: 02d9e178fc32d92458948c7ff5dcf2ea, type: 3}
+    bodyPart: 0
+    puppetComponentDescription: 'A relic from a future long passed. '
+  - puppetComponentName: Monocle
+    id: 15
+    sprite: {fileID: 21300000, guid: a7f77a01db525c143bb127975046c865, type: 3}
+    bodyPart: 0
+    puppetComponentDescription: One eye sees what two miss
+  - puppetComponentName: Power Armor
+    id: 16
+    sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+    bodyPart: 1
+    puppetComponentDescription: Powered by the corpses of tyrant-lizards
+  - puppetComponentName: Pauldron
+    id: 17
+    sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+    bodyPart: 2
+    puppetComponentDescription: The Stag Princess does not mind the edifice of war
+      - only it's ego
+  - puppetComponentName: Concert Attire
+    id: 18
+    sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+    bodyPart: 1
+    puppetComponentDescription: Can you hear the people sing?
+  - puppetComponentName: Werewolf Muscles
+    id: 19
+    sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+    bodyPart: 1
+    puppetComponentDescription: An allegory made corporeal
+  - puppetComponentName: Pet Falcon
+    id: 20
+    sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+    bodyPart: 1
+    puppetComponentDescription: 'Less alive than the wood it perches on. '
+  - puppetComponentName: Tourniquet
+    id: 20
+    sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+    bodyPart: 2
+    puppetComponentDescription: To save a life, extinguish a limb
 --- !u!114 &3092326584579144265
 MonoBehaviour:
   m_ObjectHideFlags: 0
