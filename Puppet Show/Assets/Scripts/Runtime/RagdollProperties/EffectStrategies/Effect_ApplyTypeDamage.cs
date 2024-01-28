@@ -6,6 +6,7 @@ public class Effect_ApplyTypeDamage : EffectStrategy
 {
     public IDamageable.DamageType damageType = IDamageable.DamageType.Intimidate;
     public float damageAmount = 10f;
+    public AudioClip damageSound;
     EnemyHealth enemyHealth;
     GameObject[] particleIndicators;
 
@@ -64,7 +65,7 @@ public class Effect_ApplyTypeDamage : EffectStrategy
                     targetEmitterName = "irritateEmitter";
                     break;
             }
-
+            AudioSource.PlayClipAtPoint(damageSound, gameObject.transform.position);
             foreach (GameObject emitter in particleIndicators)
             {
                 if (emitter.name == targetEmitterName)
