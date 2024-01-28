@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MeEngine.FsmManagement;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public partial class GameStateFSM : MeFsm 
 {
@@ -16,6 +17,11 @@ public partial class GameStateFSM : MeFsm
             {
                 SceneManager.LoadScene(scene);
             }
+            GameObject.Find("ReadyButton").GetComponent<Button>().onClick.AddListener(OnReadyButtonClick);
+        }
+
+        private void OnReadyButtonClick(){
+            SwapState<FightMonsterState>();
         }
     }
 }
