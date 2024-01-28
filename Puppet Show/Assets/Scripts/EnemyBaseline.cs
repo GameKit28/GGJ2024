@@ -8,6 +8,7 @@ public class EnemyBaseline : ScriptableObject
     public Vector2 damageIndicatorPosition;
     public IDamageable.DamageType preferedType;
     public Sprite EnemySprite;
+    public GameObject ProjectileSpawner;
     private static float strengthHealthFactor = 250f;
     private static float statVariabilityFactor = 75f;
     public float[] GenerateStats(float strength)
