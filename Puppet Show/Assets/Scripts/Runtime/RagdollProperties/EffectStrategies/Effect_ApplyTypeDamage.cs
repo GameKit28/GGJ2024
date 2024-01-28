@@ -8,19 +8,21 @@ public class Effect_ApplyTypeDamage : EffectStrategy
     public float damageAmount = 10f;
     EnemyHealth enemyHealth;
     GameObject[] particleIndicators;
-    
+
     public override void ActivateOnTick(GameObject gameObject)
     {
-        if(enemyHealth== null)
+        bool enemyPresent = true;
+        bool particleEmitterPresent = true;
+        if (enemyHealth == null)
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            if(enemies.Length > 0 )
+            if (enemies.Length > 0)
             {
                 enemyHealth = enemies[0].GetComponent<EnemyHealth>();
             }
             else
             {
-                gameObject.GetComponent<RagdollPartBehaviour>().enabled= false;
+                enemyPresent = false;
             }
         }
         if (particleIndicators == null)
@@ -32,43 +34,50 @@ public class Effect_ApplyTypeDamage : EffectStrategy
             }
             else
             {
-                gameObject.GetComponent<RagdollPartBehaviour>().enabled = false;
+                particleEmitterPresent = false;
             }
         }
-        enemyHealth.DealDamage(damageAmount, damageType);
-        string targetEmitterName = "";
-        GameObject particleIndicator = null;
-        ParticleSystem particleSystem = null;
-        switch (damageType)
+        if (enemyPresent)
         {
-            case IDamageable.DamageType.Intimidate:
-                targetEmitterName = "intimidateEmitter";
-                break;
-            case IDamageable.DamageType.Disgust:
-                targetEmitterName = "disgustEmitter";
-                break;
-            case IDamageable.DamageType.Calm:
-                targetEmitterName = "calmEmitter";
-                break;
-            case IDamageable.DamageType.Dazzle:
-                targetEmitterName = "dazzleEmitter";
-                break;
-            case IDamageable.DamageType.Irritate:
-                targetEmitterName = "irritateEmitter";
-                break;
+            enemyHealth.DealDamage(damageAmount, damageType);
         }
-        foreach(GameObject emitter in particleIndicators)
+        if (particleEmitterPresent)
         {
-            if(emitter.name == targetEmitterName)
+            string targetEmitterName = "";
+            GameObject particleIndicator = null;
+            ParticleSystem particleSystem = null;
+            switch (damageType)
             {
-                particleIndicator = emitter;
-                particleSystem = emitter.GetComponent<ParticleSystem>();
-                break;
+                case IDamageable.DamageType.Intimidate:
+                    targetEmitterName = "intimidateEmitter";
+                    break;
+                case IDamageable.DamageType.Disgust:
+                    targetEmitterName = "disgustEmitter";
+                    break;
+                case IDamageable.DamageType.Calm:
+                    targetEmitterName = "calmEmitter";
+                    break;
+                case IDamageable.DamageType.Dazzle:
+                    targetEmitterName = "dazzleEmitter";
+                    break;
+                case IDamageable.DamageType.Irritate:
+                    targetEmitterName = "irritateEmitter";
+                    break;
             }
+
+            foreach (GameObject emitter in particleIndicators)
+            {
+                if (emitter.name == targetEmitterName)
+                {
+                    particleIndicator = emitter;
+                    particleSystem = emitter.GetComponent<ParticleSystem>();
+                    break;
+                }
+            }
+            //Debug.Log(gameObject);
+            particleIndicator.transform.position = gameObject.transform.position;
+            particleSystem.emission.SetBurst(0, new ParticleSystem.Burst(0, new ParticleSystem.MinMaxCurve(damageAmount)));
+            particleSystem.Play();
         }
-        //Debug.Log(gameObject);
-        particleIndicator.transform.position = gameObject.transform.position;
-        particleSystem.emission.SetBurst(0,new ParticleSystem.Burst(0,new ParticleSystem.MinMaxCurve(damageAmount)));
-        particleSystem.Play();        
     }
 }

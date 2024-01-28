@@ -9,6 +9,7 @@ TagManager:
   - name
   - description
   - Slot
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX
