@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8cba97ba7ec2f248a338659f4972557, type: 3}
-  m_Name: Tambarine
+  m_Name: Flat Soda
   m_EditorClassIdentifier: 
-  puppetComponentName: Tambarine
-  puppetComponentDescription: Shake Shake
+  puppetComponentName: Soda
+  puppetComponentDescription: 
   bodyPart: 3
-  sprite: {fileID: 21300000, guid: 80af69ddeeab6264591242501c9b331b, type: 3}
+  sprite: {fileID: 21300000, guid: 0dfd04c0b713ec646896f7d2518ac061, type: 3}
   validMovementBehaviours:
+  - {fileID: 0}
   - {fileID: 11400000, guid: 0c0ee07000c9acd41a976d294c41ccdf, type: 2}
   - {fileID: 11400000, guid: f7a8e1665a3b5944da1f5d9b82ea0aec, type: 2}
   - {fileID: 11400000, guid: 95552199da3635241be36cfea717df02, type: 2}
@@ -25,6 +26,6 @@ MonoBehaviour:
   validTriggerBehaviours:
   - {fileID: 11400000, guid: 2eb6b0163ee144842bcfbae0ada60884, type: 2}
   validEffectBehaviours:
-  - {fileID: 11400000, guid: a1b1e8a7c0b4804459003c44c5b95564, type: 2}
+  - {fileID: 11400000, guid: 5271308a29b529345a5e009a3d55137f, type: 2}
   constantModifiers: []
   percentageModifiers: []
