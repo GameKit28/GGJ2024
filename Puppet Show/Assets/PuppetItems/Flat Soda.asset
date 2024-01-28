@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flat Soda
   m_EditorClassIdentifier: 
   puppetComponentName: Soda
-  puppetComponentDescription: 
+  puppetComponentDescription: Disgust 5 when shaken
   bodyPart: 3
   sprite: {fileID: 21300000, guid: 0dfd04c0b713ec646896f7d2518ac061, type: 3}
   validMovementBehaviours:

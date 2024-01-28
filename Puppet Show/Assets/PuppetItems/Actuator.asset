@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Actuator
   m_EditorClassIdentifier: 
   puppetComponentName: Radioactive Actuator
-  puppetComponentDescription: 
+  puppetComponentDescription: Dazzles 20 when still
   bodyPart: 2
   sprite: {fileID: 21300000, guid: a6f684c949c226c45bc89a4c08ccc043, type: 3}
   validMovementBehaviours:
