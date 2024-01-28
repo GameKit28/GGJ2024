@@ -12554,13 +12554,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
---- !u!1 &552048629 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6568444681307924060, guid: ac05bf8e758ead243a24abf5050e7c07, type: 3}
-  m_PrefabInstance: {fileID: 1573851444583625286}
-  m_PrefabAsset: {fileID: 0}
-=======
 --- !u!1 &522292958
 GameObject:
   m_ObjectHideFlags: 0
@@ -12645,7 +12638,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> Stashed changes
 --- !u!1 &607765213
 GameObject:
   m_ObjectHideFlags: 0

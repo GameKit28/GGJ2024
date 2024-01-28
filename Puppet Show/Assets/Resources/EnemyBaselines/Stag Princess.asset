@@ -16,9 +16,5 @@ MonoBehaviour:
   damageIndicatorPosition: {x: -6.2, y: -0.9}
   projectileSpawnerPosition: {x: 6.88, y: 0.43}
   preferedType: 3
-<<<<<<< Updated upstream
-  EnemySprite: {fileID: 21300000, guid: 56bd88ff4e94a0c4a8a834eadc8e93cd, type: 3}
-=======
   EnemySprite: {fileID: 21300000, guid: 49da941088412cb4d9e333e22037e8ba, type: 3}
->>>>>>> Stashed changes
   ProjectileSpawner: {fileID: 3070352255054125603, guid: 4d60e5a4ed9f3ab45b51dbcbbce95fc1, type: 3}
