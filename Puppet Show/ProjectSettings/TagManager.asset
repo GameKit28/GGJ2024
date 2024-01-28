@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - ParticleEmitter
   layers:
   - Default
   - TransparentFX
@@ -41,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: first
+    uniqueID: 724801005
+    locked: 0
+  - name: second
+    uniqueID: 708525175
     locked: 0
