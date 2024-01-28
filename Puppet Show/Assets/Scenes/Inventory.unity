@@ -618,6 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f8cb6d4d3e1c345b47d091958862b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emptyPuppetPrefab: {fileID: 2062226279212311862, guid: 443e14b73f4827e4fb9dafa03afb1a6d, type: 3}
 --- !u!1001 &259700382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,8 +734,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 259700384}
   m_SourcePrefab: {fileID: 100100000, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+--- !u!1 &259700383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+  m_PrefabInstance: {fileID: 259700382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &259700384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259700383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaef14d3edf0e848845ec4d236ff21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetComponentName: 
+  puppetComponentDescription: 
+  bodyPart: 1
+  sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+  movementStrategy: {fileID: 0}
+  triggerStrategy: {fileID: 0}
+  effectStrategy: {fileID: 0}
+  constantModifiers: []
+  percentageModifiers: []
 --- !u!1001 &298696928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1119,8 +1149,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2115996656}
   m_SourcePrefab: {fileID: 100100000, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+--- !u!1 &377181326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+  m_PrefabInstance: {fileID: 377181325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &604708086 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4836052298328494852, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
@@ -2000,11 +2038,44 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7416482607047210886, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1091895811}
   m_SourcePrefab: {fileID: 100100000, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+--- !u!1 &1091895810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+  m_PrefabInstance: {fileID: 1091895809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1091895811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091895810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaef14d3edf0e848845ec4d236ff21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetComponentName: 
+  puppetComponentDescription: 
+  bodyPart: 3
+  sprite: {fileID: 21300000, guid: 16803348cd20782409c4441cfeffb591, type: 3}
+  movementStrategy: {fileID: 0}
+  triggerStrategy: {fileID: 0}
+  effectStrategy: {fileID: 0}
+  constantModifiers: []
+  percentageModifiers: []
 --- !u!224 &1130976449 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4836052298328494852, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
@@ -2235,11 +2306,44 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7416482607047210886, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1578507317}
   m_SourcePrefab: {fileID: 100100000, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+--- !u!1 &1578507316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+  m_PrefabInstance: {fileID: 1578507315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1578507317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578507316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaef14d3edf0e848845ec4d236ff21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetComponentName: 
+  puppetComponentDescription: 
+  bodyPart: 2
+  sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+  movementStrategy: {fileID: 0}
+  triggerStrategy: {fileID: 0}
+  effectStrategy: {fileID: 0}
+  constantModifiers: []
+  percentageModifiers: []
 --- !u!1 &1703470166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,8 +2594,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1712764249}
   m_SourcePrefab: {fileID: 100100000, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+--- !u!1 &1712764248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+  m_PrefabInstance: {fileID: 1712764247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1712764249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712764248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaef14d3edf0e848845ec4d236ff21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetComponentName: 
+  puppetComponentDescription: 
+  bodyPart: 1
+  sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+  movementStrategy: {fileID: 0}
+  triggerStrategy: {fileID: 0}
+  effectStrategy: {fileID: 0}
+  constantModifiers: []
+  percentageModifiers: []
 --- !u!1 &1730921942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,8 +2943,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1944681022}
   m_SourcePrefab: {fileID: 100100000, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+--- !u!1 &1944681021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+  m_PrefabInstance: {fileID: 1944681020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1944681022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944681021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaef14d3edf0e848845ec4d236ff21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetComponentName: 
+  puppetComponentDescription: 
+  bodyPart: 3
+  sprite: {fileID: 21300000, guid: 16803348cd20782409c4441cfeffb591, type: 3}
+  movementStrategy: {fileID: 0}
+  triggerStrategy: {fileID: 0}
+  effectStrategy: {fileID: 0}
+  constantModifiers: []
+  percentageModifiers: []
 --- !u!1 &1969640167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,6 +3318,27 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4836052298328494852, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
   m_PrefabInstance: {fileID: 377181325}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2115996656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377181326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaef14d3edf0e848845ec4d236ff21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetComponentName: 
+  puppetComponentDescription: 
+  bodyPart: 2
+  sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
+  movementStrategy: {fileID: 0}
+  triggerStrategy: {fileID: 0}
+  effectStrategy: {fileID: 0}
+  constantModifiers: []
+  percentageModifiers: []
 --- !u!1001 &8652044285454632167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3271,5 +3454,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8652044285454632169}
   m_SourcePrefab: {fileID: 100100000, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+--- !u!1 &8652044285454632168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3402385820081811069, guid: 57177bb1b67cc2b47bb05cc756c833ba, type: 3}
+  m_PrefabInstance: {fileID: 8652044285454632167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8652044285454632169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8652044285454632168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaef14d3edf0e848845ec4d236ff21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetComponentName: 
+  puppetComponentDescription: 
+  bodyPart: 0
+  sprite: {fileID: 21300000, guid: da39cebb356069a4698896ad00f49c46, type: 3}
+  movementStrategy: {fileID: 0}
+  triggerStrategy: {fileID: 0}
+  effectStrategy: {fileID: 0}
+  constantModifiers: []
+  percentageModifiers: []
