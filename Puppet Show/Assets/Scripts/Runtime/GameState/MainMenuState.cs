@@ -7,22 +7,16 @@ using UnityEngine.UI;
 
 public partial class GameStateFSM : MeFsm 
 {
-    public class MainMenuState : MeFsmState<GameStateFSM>
+    public class MainMenuState : SceneLoadingState
     {
-        string scene = "MenuScreen";
+        protected override string sceneToLoad => "MenuScreen";
 
-        protected override void EnterState()
+        protected override void OnSceneLoaded()
         {
-            if(SceneManager.GetActiveScene().name != scene) 
-            {
-                SceneManager.LoadScene(scene);
-            }
-            Debug.Log("Load Scene Completed");
             GameObject.Find("StartGameButton").GetComponent<Button>().onClick.AddListener(OnStartGameClicked);
         }
 
         private void OnStartGameClicked(){
-            Debug.Log("StartGameButton clicked");
             SwapState<SelectEquipmentState>();
         }
     }

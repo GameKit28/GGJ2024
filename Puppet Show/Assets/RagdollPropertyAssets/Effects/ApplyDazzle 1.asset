@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 3
   damageAmount: 20
+  damageSound: {fileID: 8300000, guid: ea78294e465fbf04ba2ce71db4379f59, type: 3}

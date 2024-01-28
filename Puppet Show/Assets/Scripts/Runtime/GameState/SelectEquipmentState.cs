@@ -7,16 +7,12 @@ using UnityEngine.UI;
 
 public partial class GameStateFSM : MeFsm 
 {
-    public class SelectEquipmentState : MeFsmState<GameStateFSM>
+    public class SelectEquipmentState : SceneLoadingState
     {
-        string scene = "Inventory";
+        protected override string sceneToLoad => "Inventory";
 
-        protected override void EnterState()
+        protected override void OnSceneLoaded()
         {
-            if(SceneManager.GetActiveScene().name != scene) 
-            {
-                SceneManager.LoadScene(scene);
-            }
             GameObject.Find("ReadyButton").GetComponent<Button>().onClick.AddListener(OnReadyButtonClick);
         }
 
