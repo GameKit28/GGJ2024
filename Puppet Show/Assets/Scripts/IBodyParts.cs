@@ -6,7 +6,13 @@ public interface IBodyParts
         Head,
         Shoulder, 
         Forearm,
-        Hand
+        Hand,
+        Torso
     }
 
+    public enum LimbSide
+    {
+        Left,
+        Right
+    }
 }
