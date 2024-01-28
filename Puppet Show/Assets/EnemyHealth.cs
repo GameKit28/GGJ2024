@@ -79,7 +79,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             {
                 timeScale = 0.1f;
             }
-            Debug.Log(timeScale);
             Time.timeScale = timeScale;
             yield return new WaitForEndOfFrame();
         }

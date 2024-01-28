@@ -21,6 +21,28 @@ public interface IDamageable
     public void DealDamage(float damageAmmount, DamageType damageType);
     public static Color GetColor(DamageType type)
     {
-        return default(Color);
+        Color returnColor = default(Color);
+        switch (type)
+        {
+            case DamageType.Intimidate:
+                returnColor = intimidateColor;
+                break;
+            case DamageType.Disgust:
+                returnColor = disgustColor;
+                break;
+            case DamageType.Calm:
+                returnColor = calmColor;
+                break;
+            case DamageType.Dazzle:
+                returnColor = dazzleColor;
+                break;
+            case DamageType.Irritate:
+                returnColor = irritateColor;
+                break;
+            default:
+                returnColor = default(Color);
+                break;
+        }
+        return returnColor;
     }
 }
