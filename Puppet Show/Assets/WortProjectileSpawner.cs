@@ -19,7 +19,7 @@ public class WortProjectileSpawner : MonoBehaviour
     void Update()
     {
         //choose a random integer between 0 and 100
-        int randomInt = Random.Range(0, 1000);
+        int randomInt = Random.Range(0, 200);
         //if the random integer is less than 1
         if (randomInt < 1)
         {
