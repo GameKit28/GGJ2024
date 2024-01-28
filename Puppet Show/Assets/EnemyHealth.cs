@@ -12,11 +12,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] private float calm;
     [SerializeField] private float dazzle;
     [SerializeField] private float irritate;
-    [SerializeField] private Color intimidateColor;
-    [SerializeField] private Color disgustColor;
-    [SerializeField] private Color calmColor;
-    [SerializeField] private Color dazzleColor;
-    [SerializeField] private Color irritateColor;
     [SerializeField] private GameObject damageIndicatorPrefab;
     [SerializeField] private Transform damageIndicatorOrigin;
 
@@ -32,22 +27,24 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     public void DealDamage(float damageAmmount, IDamageable.DamageType damageType)
     {
+        Color color = IDamageable.GetColor(damageType);
         switch (damageType)
         {
+            
             case IDamageable.DamageType.Intimidate:
-                DamageEnemy(damageAmmount,ref intimidate, intimidateColor);
+                DamageEnemy(damageAmmount,ref intimidate, color);
                 break;
             case IDamageable.DamageType.Disgust:
-                DamageEnemy(damageAmmount, ref disgust, disgustColor);
+                DamageEnemy(damageAmmount, ref disgust, color);
                 break;
             case IDamageable.DamageType.Calm:
-                DamageEnemy(damageAmmount, ref calm, calmColor);
+                DamageEnemy(damageAmmount, ref calm, color);
                 break;
             case IDamageable.DamageType.Dazzle:
-                DamageEnemy(damageAmmount, ref dazzle, dazzleColor);
+                DamageEnemy(damageAmmount, ref dazzle, color);
                 break;
             case IDamageable.DamageType.Irritate:
-                DamageEnemy(damageAmmount, ref irritate, irritateColor);
+                DamageEnemy(damageAmmount, ref irritate, color);
                 break;
             default:
                 break;
