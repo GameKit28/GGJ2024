@@ -2,15 +2,15 @@ using UnityEngine;
 
 [CreateAssetMenu]
 public class Trigger_Pointing : TriggerStrategy
-
-//takes in a GameObject, an angle, and a tolerance
-//returns true if the GameObject is pointing within the tolerance of the angle
-//returns false otherwise
-
 {
+    //takes in a GameObject, an angle, and a tolerance
+    //returns true if the GameObject is pointing within the tolerance of the angle
+    //returns false otherwise
+    [SerializeField] float targetAngle;
+    [SerializeField] float tolerance;
+
     public override bool CheckConditionOnTick(GameObject gameObject){
-        [SerializeField] float targetAngle;
-        [SerializeField] float tolerance;
+
         //check to see if the GameObject is pointing very close to straight right
 
         //get the angle of the GameObject
