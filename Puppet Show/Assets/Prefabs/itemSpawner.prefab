@@ -97,115 +97,451 @@ MonoBehaviour:
     id: 1
     sprite: {fileID: 21300000, guid: 9bbdeb73a8101d24da6f7849ea25b620, type: 3}
     bodyPart: 3
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: Even the Stag Princess will recoil in terror when
       held at swordpoint
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1.25
+    - 0
+    - 0.75
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Rose
     id: 2
     sprite: {fileID: 21300000, guid: d68ce5efd22ccf34aa18b3ae827dcd13, type: 3}
     bodyPart: 3
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: The law of T'heth compels the Bidden to accept gifts
       of still roses
+    globalModifiers:
+    - 0
+    - 0.75
+    - 1.25
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: Still
+    effect: Calm
   - puppetComponentName: Tambourine
     id: 3
     sprite: {fileID: 21300000, guid: 80af69ddeeab6264591242501c9b331b, type: 3}
     bodyPart: 3
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: Music is to the Listeners without Ears what Darkness
       is to mortals
+    globalModifiers:
+    - 0
+    - 0.75
+    - 0
+    - 0
+    - 1.25
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Flat Soda
     id: 4
     sprite: {fileID: 21300000, guid: 0dfd04c0b713ec646896f7d2518ac061, type: 3}
     bodyPart: 3
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: The least natural entity in the room
+    globalModifiers:
+    - 0
+    - 1.25
+    - 0
+    - 0.75
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Wand
     id: 5
     sprite: {fileID: 21300000, guid: 16803348cd20782409c4441cfeffb591, type: 3}
     bodyPart: 3
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: 'All puppets are magical, so long as they never develop
       a soul. That is why humans cannot see the Stag Princess'' Tracks. '
+    globalModifiers:
+    - 0.75
+    - 0
+    - 0
+    - 1.25
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Bracer
     id: 6
     sprite: {fileID: 21300000, guid: f9dd83b5582181b4fa4f0d1677242413, type: 3}
     bodyPart: 2
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: 'Cold Metal rusts in the Stag Princess'' tracks. '
+    globalModifiers:
+    - 1.5
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - -1
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Flesh Wound
     id: 7
     sprite: {fileID: 21300000, guid: 7e356a8fbbc4f2645adc2e279b607855, type: 3}
     bodyPart: 2
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: And you wonder why the Bidden hunt you
+    globalModifiers:
+    - 0
+    - 1.5
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - -1
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Friendship Bracelet
     id: 8
     sprite: {fileID: 21300000, guid: f9dd83b5582181b4fa4f0d1677242413, type: 3}
     bodyPart: 2
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: The Young Gods cannot resist the power of an austere
       ritual
+    globalModifiers:
+    - 0.75
+    - 0.75
+    - 1.5
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Radioactive Actuator
     id: 9
     sprite: {fileID: 21300000, guid: a6f684c949c226c45bc89a4c08ccc043, type: 3}
     bodyPart: 2
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: The only magic men possess
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - -1
+    - -1
+    - -1
+    - 2
+    - -1
+    trigger: 
+    effect: 
   - puppetComponentName: Wristwatch
     id: 10
     sprite: {fileID: 21300000, guid: edc29b3a6b24deb48b9b205d844ca243, type: 3}
     bodyPart: 2
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: Time only began to pass six centuries ago in Nuremberg
+    globalModifiers:
+    - 0.75
+    - 1.2
+    - 0.75
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    trigger: 
+    effect: 
   - puppetComponentName: Powdered Wig
     id: 11
     sprite: {fileID: 21300000, guid: 90c993dbc24bb6343adc600d6dfadf28, type: 3}
     bodyPart: 0
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: Wort has served on many juries, in many different
       skins - but he has never been a judge
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    trigger: 
+    effect: 
   - puppetComponentName: Letterhead
     id: 12
     sprite: {fileID: 21300000, guid: a48c3e444e1ee4342ab4faae8c4db9ad, type: 3}
     bodyPart: 0
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: The Stag Princess demands what cannot be sent over
       e-mail
+    globalModifiers:
+    - 1.5
+    - 1.5
+    - 1.5
+    - 1.5
+    - 1.5
+    - -5
+    - -5
+    - -5
+    - -5
+    - 10
+    trigger: 
+    effect: 
   - puppetComponentName: Overclocked PC
     id: 13
     sprite: {fileID: 21300000, guid: 95286828c8815b943909945b61ed0f6c, type: 3}
     bodyPart: 0
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: 'Whatever men waste with reckless abandon, Wort recycles. '
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Hopilite Plume
     id: 14
     sprite: {fileID: 21300000, guid: 02d9e178fc32d92458948c7ff5dcf2ea, type: 3}
     bodyPart: 0
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: 'A relic from a future long passed. '
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Monocle
     id: 15
     sprite: {fileID: 21300000, guid: a7f77a01db525c143bb127975046c865, type: 3}
     bodyPart: 0
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: One eye sees what two miss
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Power Armor
     id: 16
     sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
     bodyPart: 1
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: Powered by the corpses of tyrant-lizards
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - 1
+    - 1
+    - -1
+    - 1
+    trigger: 
+    effect: 
   - puppetComponentName: Pauldron
     id: 17
     sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
     bodyPart: 2
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: The Stag Princess does not mind the edifice of war
       - only it's ego
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - 1
+    - 1
+    - -1
+    - 1
+    trigger: 
+    effect: 
   - puppetComponentName: Concert Attire
     id: 18
     sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
     bodyPart: 1
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: Can you hear the people sing?
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - -1
+    - 1
+    - 1
+    - 1
+    - 1
+    trigger: 
+    effect: 
   - puppetComponentName: Werewolf Muscles
     id: 19
     sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
     bodyPart: 1
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: An allegory made corporeal
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - 1
+    - -1
+    - 1
+    - 1
+    trigger: 
+    effect: 
   - puppetComponentName: Pet Falcon
     id: 20
     sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
     bodyPart: 1
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: 'Less alive than the wood it perches on. '
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    trigger: 
+    effect: 
   - puppetComponentName: Tourniquet
     id: 20
     sprite: {fileID: 21300000, guid: ea8f7fe7665ca8f49a7df22321bbba3e, type: 3}
     bodyPart: 2
+    movementType: 0
+    movementStrength: 0
+    damage: 0
     puppetComponentDescription: To save a life, extinguish a limb
+    globalModifiers:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - 1
+    - 1
+    - 1
+    - -1
+    trigger: 
+    effect: 
 --- !u!114 &3092326584579144265
 MonoBehaviour:
   m_ObjectHideFlags: 0
