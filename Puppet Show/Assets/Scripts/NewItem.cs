@@ -22,7 +22,7 @@ public class NewItem : MonoBehaviour, IBodyParts
             myItems[randomIndex].id,
             myItems[randomIndex].sprite,
             myItems[randomIndex].bodyPart,
-            myItems[randomIndex].puppetComponentDescription
+            myItems[randomIndex].puppetComponentDescription,
             randomMovement,
             movementStrength, 
             randomDamage
