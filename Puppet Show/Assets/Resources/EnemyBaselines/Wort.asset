@@ -15,6 +15,7 @@ MonoBehaviour:
   startingPos: {x: 14.74, y: 1.11}
   damageIndicatorPosition: {x: -9, y: -2.5}
   projectileSpawnerPosition: {x: 8.87, y: -1.96}
+  hitBoxSize: {x: 20, y: 12.5}
   preferedType: 1
   EnemySprite: {fileID: 21300000, guid: b18a38eb4a80c27409a2bff391fb9eaa, type: 3}
   ProjectileSpawner: {fileID: 6468771782067081994, guid: 446e3cf332053234b83f25cdbd085bfe, type: 3}

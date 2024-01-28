@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveVelocity: {x: -0.58, y: 6.59}
   runVelocity: {x: 1.84, y: 5.58}
-  timeBetweenMovements: 8
+  timeBetweenMovements: 6
   timeBetweenMovementsVariability: 3
   gravity: -16
 --- !u!212 &4541154490586221693
@@ -225,7 +225,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5868569313265908190}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
