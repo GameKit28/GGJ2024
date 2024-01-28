@@ -17,35 +17,40 @@ public class HealthBarRenderer : MonoBehaviour
     private float highestHealth;
     private int highestHealthIndex;
     private float[] healthBars;
+    private bool rendererSetup = false;
     // Start is called before the first frame update
 
     private void Update()
     {
-        float[] newHealth = enemyHealth.getHealthBars();
-        healthBars[0] = Mathf.Lerp(healthBars[0], newHealth[0], animationSpeed * Time.deltaTime);
-        healthBars[1] = Mathf.Lerp(healthBars[1], newHealth[1], animationSpeed * Time.deltaTime);
-        healthBars[2] = Mathf.Lerp(healthBars[2], newHealth[2], animationSpeed * Time.deltaTime);
-        healthBars[3] = Mathf.Lerp(healthBars[3], newHealth[3], animationSpeed * Time.deltaTime);
-        healthBars[4] = Mathf.Lerp(healthBars[4], newHealth[4], animationSpeed * Time.deltaTime);
-        RenderHealthBars();
+        if (rendererSetup)
+        {
+            float[] newHealth = enemyHealth.getHealthBars();
+            healthBars[0] = Mathf.Lerp(healthBars[0], newHealth[0], animationSpeed * Time.deltaTime);
+            healthBars[1] = Mathf.Lerp(healthBars[1], newHealth[1], animationSpeed * Time.deltaTime);
+            healthBars[2] = Mathf.Lerp(healthBars[2], newHealth[2], animationSpeed * Time.deltaTime);
+            healthBars[3] = Mathf.Lerp(healthBars[3], newHealth[3], animationSpeed * Time.deltaTime);
+            healthBars[4] = Mathf.Lerp(healthBars[4], newHealth[4], animationSpeed * Time.deltaTime);
+            RenderHealthBars();
+        }
     }
 
     public void SetupRenderer(EnemyHealth enemyHealth)
     {
         this.enemyHealth =  enemyHealth;
         healthBars = enemyHealth.getHealthBars();
-        float highest = healthBars[0];
+        highestHealth = healthBars[0];
         highestHealthIndex = 0;
         for(int i = 1; i < healthBars.Length; i++)
         {
             
-            if (healthBars[i] > highest)
+            if (healthBars[i] > highestHealth)
             {
                 highestHealth = healthBars[i];
                 highestHealthIndex = i;
             }
         }
         RenderHealthBars();
+        rendererSetup = true;
     }
 
     private void RenderHealthBars()

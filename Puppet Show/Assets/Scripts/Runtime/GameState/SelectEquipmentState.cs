@@ -8,9 +8,14 @@ public partial class GameStateFSM : MeFsm
 {
     public class SelectEquipmentState : MeFsmState<GameStateFSM>
     {
+        string scene = "Inventory";
+
         protected override void EnterState()
         {
-            //Load the scene
+            if(SceneManager.GetActiveScene().name != scene) 
+            {
+                SceneManager.LoadScene(scene);
+            }
         }
     }
 }

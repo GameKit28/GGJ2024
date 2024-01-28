@@ -19,20 +19,12 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [Header("Time Dialation")]
     [SerializeField] private float dialationTime;
     [SerializeField] private AnimationCurve dialationEffectOverTime;
+    private EnemySpawner spawner;
 
-    private void Start()
-    {
-        healthBarRenderer.SetupRenderer(this);
-    }
-    private void Update()
-    {
-
-    }
-
+    
     public void DealDamage(float damageAmmount, IDamageable.DamageType damageType)
     {
         Color color = IDamageable.GetColor(damageType);
-        Debug.Log(color);
         switch (damageType)
         {
             
@@ -67,8 +59,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         movementBehavior.SetupMovement(damageIndicatorOrigin);
         if(healthPool <= 0)
         {
-            Debug.Log("Dead");
+            //Debug.Log("Dead");
             //Insert Death Logic Here
+            GameStateFSM.Instance.OnEnemyDeath();
         }
     }
     
@@ -101,4 +94,24 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         healthBars[4] = irritate;
         return healthBars;
     }
+
+    public void SetHealth(float[] stats)
+    {
+        intimidate = stats[0];
+        disgust = stats[1];
+        calm = stats[2];
+        dazzle = stats[3];
+        irritate = stats[4];
+    }
+
+    public void StartEnemy()
+    {
+        healthBarRenderer.SetupRenderer(this);
+    }
+
+    public void SetHealthBarRender(HealthBarRenderer renderer)
+    {
+        healthBarRenderer = renderer;
+    }
+
 }

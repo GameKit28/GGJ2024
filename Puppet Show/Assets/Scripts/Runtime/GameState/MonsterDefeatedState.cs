@@ -8,7 +8,16 @@ public partial class GameStateFSM : MeFsm
 {
     public class MonsterDefeatedState : MeFsmState<GameStateFSM>
     {
-        
+        protected override void EnterState()
+        {
+            //do stuff
+            base.EnterState();
+        }
+        protected override void ExitState()
+        {
+            //cleanup
+            base.ExitState();
+        }
     }
 }
 
