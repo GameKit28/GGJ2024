@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public partial class GameStateFSM : MeFsm 
 {
-    public class MainMenuState : MeFsmState<GameStateFSM>
+    public class FightMonsterState : MeFsmState<GameStateFSM>
     {
-        string scene = "MenuScreen";
+        string scene = "SampleScene";
 
         protected override void EnterState()
         {

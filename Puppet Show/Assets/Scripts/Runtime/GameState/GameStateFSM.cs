@@ -16,4 +16,10 @@ public partial class GameStateFSM : MeFsm
             GameObject.Destroy(this);
         }
     }
+
+    public void OnStartGameClick()
+    {
+        Debug.Log("Start Game Button Pressed");
+        Instance.SwapState<SelectEquipmentState>();
+    }
 }
