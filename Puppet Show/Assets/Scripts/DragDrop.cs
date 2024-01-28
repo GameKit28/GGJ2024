@@ -11,6 +11,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private Vector2 initialPosition;
 
+    private GameObject puppetItemObject;
+    private PuppetComponents itemDragged;
+
+
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -20,6 +24,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private void Start()
     {
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        puppetItemObject = gameObject;
+        itemDragged = gameObject.GetComponent<PuppetComponents>();
+     
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -37,6 +44,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (!(eventData.pointerEnter != null && eventData.pointerEnter.tag == "Slot"))
         {
             rectTransform.position = initialPosition;
+        }
+        else
+        {
+            Inventory.Instance.AddPuppetComponent(GameObject.Instantiate(itemDragged));
         }
         
         Debug.Log("drag end");
