@@ -6,8 +6,8 @@ public class ItemAsset : ScriptableObject
 {
     [System.Serializable]
     public class DamageTypeToValueMap{
-        IDamageable.DamageType damageType;
-        float modifierValue;
+        public IDamageable.DamageType damageType;
+        public float modifierValue;
     }
 
     public string puppetComponentName;
