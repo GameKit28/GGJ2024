@@ -19,6 +19,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [Header("Time Dialation")]
     [SerializeField] private float dialationTime;
     [SerializeField] private AnimationCurve dialationEffectOverTime;
+    private EnemySpawner spawner;
 
     
     public void DealDamage(float damageAmmount, IDamageable.DamageType damageType)
@@ -58,8 +59,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         movementBehavior.SetupMovement(damageIndicatorOrigin);
         if(healthPool <= 0)
         {
-            Debug.Log("Dead");
+            //Debug.Log("Dead");
             //Insert Death Logic Here
+            GameStateFSM.Instance.OnEnemyDeath();
         }
     }
     
@@ -111,4 +113,5 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     {
         healthBarRenderer = renderer;
     }
+
 }

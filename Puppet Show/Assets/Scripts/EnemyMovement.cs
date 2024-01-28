@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 moveVelocity;
+    [SerializeField] private Vector2 runVelocity;
+    private Vector2 activeVelocity;
     [SerializeField] private float timeBetweenMovements;
     [SerializeField] private float timeBetweenMovementsVariability;
     [SerializeField] private float gravity;
@@ -14,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         rb= GetComponent<Rigidbody2D>();
+        activeVelocity = moveVelocity;
         SetUpNextMovement();
     }
     private void FixedUpdate()
@@ -34,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
     {
         midJump = true;
         float floorHeight = transform.position.y;
-        Vector2 velocity = moveVelocity;
+        Vector2 velocity = activeVelocity;
         Vector2 acceleration = new Vector2(0, gravity);
         while (midJump)
         {
@@ -48,6 +52,12 @@ public class EnemyMovement : MonoBehaviour
             }
             yield return new WaitForFixedUpdate();
         }
-        
+    }
+    public void RunAway()
+    {
+        timeBetweenMovements = 0.25f;
+        timeBetweenMovementsVariability = .1f;
+        activeVelocity = runVelocity;
+        SetUpNextMovement();
     }
 }

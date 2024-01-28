@@ -1,5 +1,6 @@
 using UnityEngine;
 using MeEngine.FsmManagement;
+using System.Collections;
 
 public partial class GameStateFSM : MeFsm
 {
@@ -19,5 +20,22 @@ public partial class GameStateFSM : MeFsm
     {
         Debug.Log("Start Game Button Pressed");
         Instance.SwapState<SelectEquipmentState>();
+    }
+    public void OnEnemyDeath()
+    {
+
+        EnemySpawner spawner = GameObject.FindWithTag("EnemySpawner").GetComponent<EnemySpawner>();
+        GameObject enemy = spawner.GetCurrentEnemy();
+        enemy.GetComponent<EnemyMovement>().RunAway();
+        StartCoroutine(WaitAndDestroyEnemy(enemy, spawner));
+    }
+    private IEnumerator WaitAndDestroyEnemy(GameObject enemy, EnemySpawner spawner)
+    {
+        while(enemy.transform.position.x < 20f)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        spawner.RemoveEnemy();
+        SwapState<MonsterDefeatedState>();
     }
 }

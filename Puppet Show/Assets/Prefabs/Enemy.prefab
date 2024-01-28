@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveVelocity: {x: -0.58, y: 6.59}
+  runVelocity: {x: 1.84, y: 5.58}
   timeBetweenMovements: 8
   timeBetweenMovementsVariability: 3
   gravity: -16

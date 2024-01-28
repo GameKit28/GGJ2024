@@ -41,4 +41,21 @@ public class EnemySpawner : MonoBehaviour
         enemyHealth.SetHealthBarRender(currentHealthBars.GetComponent<HealthBarRenderer>());
         enemyHealth.StartEnemy();
     }
+
+    public void RemoveEnemy()
+    {
+        if (currentEnemy != null)
+        {
+            Destroy(currentEnemy);
+        }
+        if (currentHealthBars != null)
+        {
+            Destroy(currentHealthBars);
+        }
+    }
+
+    public GameObject GetCurrentEnemy()
+    {
+        return currentEnemy;
+    }
 }
