@@ -26,4 +26,5 @@ public class PuppetComponents : MonoBehaviour, IBodyParts
 
         gameObject.GetComponent<Image>().sprite = sprite;
     }
+
 }
