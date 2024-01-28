@@ -30,7 +30,12 @@ public class ItemRandomizer : MonoBehaviour
     }
 
     private T GetRandom<T>(List<T> options){
-        int index = Random.Range(0, options.Count);
-        return options[index];
+        
+        if(options.Count > 0){
+            int index = Random.Range(0, options.Count);
+            return options[index];
+        }else{
+            return default(T);
+        }
     }
 }

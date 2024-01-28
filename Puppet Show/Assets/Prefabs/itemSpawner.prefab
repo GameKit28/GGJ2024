@@ -93,6 +93,8 @@ MonoBehaviour:
   itemPrefab: {fileID: 1454471064415600772, guid: e261bc94398b8fe48b71c789184abf24, type: 3}
   possibleItems:
   - {fileID: 11400000, guid: 5d85b714f2622de42a09aa6c4ae80492, type: 2}
+  - {fileID: 11400000, guid: e440591be2afa8f419ad5a3a5087c355, type: 2}
+  - {fileID: 11400000, guid: 39d5c617f577eec40a45f6b433248f44, type: 2}
 --- !u!114 &3092326584579144265
 MonoBehaviour:
   m_ObjectHideFlags: 0
