@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MeEngine.FsmManagement;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public partial class GameStateFSM : MeFsm 
 {
@@ -16,6 +17,13 @@ public partial class GameStateFSM : MeFsm
             {
                 SceneManager.LoadScene(scene);
             }
+            Debug.Log("Load Scene Completed");
+            GameObject.Find("StartGameButton").GetComponent<Button>().onClick.AddListener(OnStartGameClicked);
+        }
+
+        private void OnStartGameClicked(){
+            Debug.Log("StartGameButton clicked");
+            SwapState<SelectEquipmentState>();
         }
     }
 }
