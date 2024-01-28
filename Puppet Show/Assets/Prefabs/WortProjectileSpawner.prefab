@@ -14,7 +14,7 @@ GameObject:
   m_Layer: 0
   m_Name: WortProjectileSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3783889218613677417
 SpriteRenderer:
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,3 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135e0b2d641c24b42a40ceb0d17e200a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WortProjectile: {fileID: 6568444681307924060, guid: ac05bf8e758ead243a24abf5050e7c07, type: 3}
+  launchVelocity: 20
+  launchAngle: 105
+  launchAngleRandomness: 10
+  timeBetweenLaunchAttempt: 0.25
+  launchRate: 12

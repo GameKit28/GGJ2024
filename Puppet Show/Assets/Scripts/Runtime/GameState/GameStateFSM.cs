@@ -1,6 +1,7 @@
 using UnityEngine;
 using MeEngine.FsmManagement;
 using System.Collections;
+using UnityEngine.UIElements;
 
 public partial class GameStateFSM : MeFsm
 {
@@ -16,11 +17,6 @@ public partial class GameStateFSM : MeFsm
         }
     }
 
-    public void OnStartGameClick()
-    {
-        Debug.Log("Start Game Button Pressed");
-        Instance.SwapState<SelectEquipmentState>();
-    }
     public void OnEnemyDeath()
     {
 
@@ -28,6 +24,12 @@ public partial class GameStateFSM : MeFsm
         GameObject enemy = spawner.GetCurrentEnemy();
         enemy.GetComponent<EnemyMovement>().RunAway();
         StartCoroutine(WaitAndDestroyEnemy(enemy, spawner));
+    }
+    public void OnPlayerDeath()
+    {
+        EnemySpawner spawner = GameObject.FindWithTag("EnemySpawner").GetComponent<EnemySpawner>();
+        GameObject.FindWithTag("Curtains").GetComponent<MoveObject>().enabled = true;
+        WaitAndDestroy<GameOverState>(GameObject.FindWithTag("Player"), spawner, 7f);
     }
     private IEnumerator WaitAndDestroyEnemy(GameObject enemy, EnemySpawner spawner)
     {
@@ -37,5 +39,18 @@ public partial class GameStateFSM : MeFsm
         }
         spawner.RemoveEnemy();
         SwapState<MonsterDefeatedState>();
+    }
+    private IEnumerator WaitAndDestroy<SType>(GameObject obj, EnemySpawner spawner, float time) where SType : MeEngine.FsmManagement.MeFsmStateBase
+    {
+        float timer = 0;
+
+        while (timer < time)
+        {
+            timer += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        spawner.RemoveEnemy();
+        Destroy(obj);
+        SwapState<SType>();
     }
 }

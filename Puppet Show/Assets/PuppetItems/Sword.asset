@@ -19,6 +19,9 @@ MonoBehaviour:
   validMovementBehaviours:
   - {fileID: 11400000, guid: 95552199da3635241be36cfea717df02, type: 2}
   - {fileID: 11400000, guid: 89d6a4c0538f83046b86563178c1ae8b, type: 2}
+  - {fileID: 11400000, guid: 795ed685b68bd0a44b638b7ac2ac2f95, type: 2}
+  - {fileID: 11400000, guid: 95552199da3635241be36cfea717df02, type: 2}
+  - {fileID: 11400000, guid: f7a8e1665a3b5944da1f5d9b82ea0aec, type: 2}
   validTriggerBehaviours:
   - {fileID: 11400000, guid: 4972229379c38b94a9e9d338c036ea45, type: 2}
   validEffectBehaviours:

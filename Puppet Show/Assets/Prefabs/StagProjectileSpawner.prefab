@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5522dc5b6ce0f174380d8e6cb4a55499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchRate: 500
+  launchRate: 12
+  timeBetweenLaunchAttempt: 0.25
   StagProjectile: {fileID: 4176201101903249419, guid: 2ec2b1a443f0830449453d3fbe79a6d8, type: 3}
   launchVelocity: 10
   launchAngle: 170

@@ -28,5 +28,13 @@ public class StickController : MonoBehaviour
         rb.MoveRotation(Quaternion.Euler(new Vector3(0,0,leanAngle)));
     }
 
-  
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.collider.gameObject.tag == "EnemyProjectile")
+        {
+            GameStateFSM.Instance.OnPlayerDeath();
+        }
+    }
+
 }

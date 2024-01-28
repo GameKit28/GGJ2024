@@ -16,7 +16,12 @@ MonoBehaviour:
   puppetComponentDescription: Shake Shake
   bodyPart: 3
   sprite: {fileID: 21300000, guid: 80af69ddeeab6264591242501c9b331b, type: 3}
-  validMovementBehaviours: []
+  validMovementBehaviours:
+  - {fileID: 11400000, guid: 0c0ee07000c9acd41a976d294c41ccdf, type: 2}
+  - {fileID: 11400000, guid: f7a8e1665a3b5944da1f5d9b82ea0aec, type: 2}
+  - {fileID: 11400000, guid: 95552199da3635241be36cfea717df02, type: 2}
+  - {fileID: 11400000, guid: 795ed685b68bd0a44b638b7ac2ac2f95, type: 2}
+  - {fileID: 11400000, guid: 89d6a4c0538f83046b86563178c1ae8b, type: 2}
   validTriggerBehaviours:
   - {fileID: 11400000, guid: 2eb6b0163ee144842bcfbae0ada60884, type: 2}
   validEffectBehaviours:

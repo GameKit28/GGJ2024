@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private EnemyBaseline enemy;
     [SerializeField] private GameObject currentEnemy;
     [SerializeField] private GameObject currentHealthBars;
+    [SerializeField] private GameObject currentProjectileSpawner;
     private void Update()
     {
         if(spawn)
@@ -29,16 +30,26 @@ public class EnemySpawner : MonoBehaviour
         {
             Destroy(currentHealthBars);
         }
+        if (currentProjectileSpawner != null)
+        {
+            Destroy(currentProjectileSpawner);
+        }
         currentEnemy = Instantiate(enemyPrefab);
-        
         EnemyHealth enemyHealth = currentEnemy.GetComponent<EnemyHealth>();
         enemyHealth.SetHealth(enemy.GenerateStats(strengthModifier));
         SpriteRenderer renderer = currentEnemy.GetComponent<SpriteRenderer>();
         renderer.sprite = enemy.EnemySprite;
         currentEnemy.transform.position = enemy.startingPos;
         currentEnemy.transform.GetChild(0).transform.localPosition = enemy.damageIndicatorPosition;
+
         currentHealthBars = Instantiate(healthBarBannersPrefab);
         enemyHealth.SetHealthBarRender(currentHealthBars.GetComponent<HealthBarRenderer>());
+
+        currentProjectileSpawner = Instantiate(enemy.ProjectileSpawner);
+        currentProjectileSpawner.transform.position = enemy.projectileSpawnerPosition;
+        currentProjectileSpawner.transform.parent = currentEnemy.transform;
+        currentProjectileSpawner.GetComponent<IScalable>().Scale(strength);
+
         enemyHealth.StartEnemy();
     }
 
@@ -51,6 +62,10 @@ public class EnemySpawner : MonoBehaviour
         if (currentHealthBars != null)
         {
             Destroy(currentHealthBars);
+        }
+        if (currentProjectileSpawner != null)
+        {
+            Destroy(currentProjectileSpawner);
         }
     }
 
