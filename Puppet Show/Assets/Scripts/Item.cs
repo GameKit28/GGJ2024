@@ -12,9 +12,9 @@ public class Item : IBodyParts
     public int damage;
     public string puppetComponentDescription;
 
-    public float[] globalModifiers = new float[10]
-    public string trigger
-    public string effect
+    public float[] globalModifiers = new float[10];
+    public string trigger;
+    public string effect;
 
 
 
