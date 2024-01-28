@@ -41,6 +41,7 @@ public class EnemySpawner : MonoBehaviour
         renderer.sprite = enemy.EnemySprite;
         currentEnemy.transform.position = enemy.startingPos;
         currentEnemy.transform.GetChild(0).transform.localPosition = enemy.damageIndicatorPosition;
+        currentEnemy.GetComponent<BoxCollider2D>().size = enemy.hitBoxSize;
 
         currentHealthBars = Instantiate(healthBarBannersPrefab);
         enemyHealth.SetHealthBarRender(currentHealthBars.GetComponent<HealthBarRenderer>());

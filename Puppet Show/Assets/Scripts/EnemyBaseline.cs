@@ -7,6 +7,7 @@ public class EnemyBaseline : ScriptableObject
     public Vector2 startingPos;
     public Vector2 damageIndicatorPosition;
     public Vector2 projectileSpawnerPosition;
+    public Vector2 hitBoxSize;
     public IDamageable.DamageType preferedType;
     public Sprite EnemySprite;
     public GameObject ProjectileSpawner;
