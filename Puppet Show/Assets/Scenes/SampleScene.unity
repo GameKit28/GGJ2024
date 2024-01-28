@@ -32135,11 +32135,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< Updated upstream
-  m_RootOrder: 8
-=======
   m_RootOrder: 9
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1953207531 stripped
 Rigidbody2D:
@@ -36814,8 +36810,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1081113698}
   m_SourcePrefab: {fileID: 100100000, guid: 1274a31a1c0cf1b4a94259db9675e132, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &1573851444583625286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36950,4 +36944,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 446e3cf332053234b83f25cdbd085bfe, type: 3}
->>>>>>> Stashed changes
