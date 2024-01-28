@@ -29,7 +29,7 @@ public partial class GameStateFSM : MeFsm
     {
         EnemySpawner spawner = GameObject.FindWithTag("EnemySpawner").GetComponent<EnemySpawner>();
         GameObject.FindWithTag("Curtains").GetComponent<MoveObject>().enabled = true;
-        WaitAndDestroy<GameOverState>(GameObject.FindWithTag("Player"), spawner, 7f);
+        StartCoroutine(WaitAndDestroy<GameOverState>(GameObject.FindWithTag("Player"), spawner, 1.2f));
     }
     private IEnumerator WaitAndDestroyEnemy(GameObject enemy, EnemySpawner spawner)
     {

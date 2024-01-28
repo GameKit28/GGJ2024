@@ -16,6 +16,7 @@ public class SpawnStagProjectile : MonoBehaviour, IScalable
     public float launchAngle = 170f;
     public float launchAngleRandomness = 35f;
     private float timer;
+    private bool start = false;
     public void Scale(float strength)
     {
         launchRate = launchRate * (launchRate / (strength * launchRate));
@@ -31,25 +32,37 @@ public class SpawnStagProjectile : MonoBehaviour, IScalable
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > timeBetweenLaunchAttempt)
+        if (!start)
         {
-            timer = 0;
-            //check to see if a random integer is less than 1
-            float randomValue = Random.Range(0f, launchRate);
-            if (randomValue < 1)
+            if (timer > 1)
             {
-                //spawn a projectile
-                GameObject projectile = Instantiate(StagProjectile, transform.position, Quaternion.identity);
-                //get the rigidbody of the projectile
-                Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
-                //get the angle of the projectile
-                float angle = launchAngle + Random.Range(-launchAngleRandomness, launchAngleRandomness);
-                //get the x component of the angle
-                float xComponent = Mathf.Cos(angle * Mathf.Deg2Rad);
-                //get the y component of the angle
-                float yComponent = Mathf.Sin(angle * Mathf.Deg2Rad);
-                //set the velocity of the projectile
-                projectileRigidbody.velocity = new Vector2(xComponent, yComponent) * launchVelocity;
+                timer = 0;
+                start = true;
+            }
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            if (timer > timeBetweenLaunchAttempt)
+            {
+                timer = 0;
+                //check to see if a random integer is less than 1
+                float randomValue = Random.Range(0f, launchRate);
+                if (randomValue < 1)
+                {
+                    //spawn a projectile
+                    GameObject projectile = Instantiate(StagProjectile, transform.position, Quaternion.identity);
+                    //get the rigidbody of the projectile
+                    Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
+                    //get the angle of the projectile
+                    float angle = launchAngle + Random.Range(-launchAngleRandomness, launchAngleRandomness);
+                    //get the x component of the angle
+                    float xComponent = Mathf.Cos(angle * Mathf.Deg2Rad);
+                    //get the y component of the angle
+                    float yComponent = Mathf.Sin(angle * Mathf.Deg2Rad);
+                    //set the velocity of the projectile
+                    projectileRigidbody.velocity = new Vector2(xComponent, yComponent) * launchVelocity;
+                }
             }
         }
         
