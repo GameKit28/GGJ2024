@@ -1,29 +1,21 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PuppetComponents : MonoBehaviour, IBodyParts
+public class PuppetComponents : MonoBehaviour
 {
-
     public string puppetComponentName;
-    public int id;
-    public Sprite sprite;
-    public IBodyParts.BodyPart bodyPart;
     public string puppetComponentDescription;
-    public int movementType;
-    public int movementStrength;
-    public int damage;
+    public IBodyParts.BodyPart bodyPart;
+    public Sprite sprite;
+    public MovementStrategy movementStrategy;
+    public TriggerStrategy triggerStrategy;
+    public EffectStrategy effectStrategy;
+    public List<ItemAsset.DamageTypeToValueMap> constantModifiers;
+    public List<ItemAsset.DamageTypeToValueMap> percentageModifiers;
 
-
-    public void SetProperties(string PuppetComponentName, int id, Sprite sprite, IBodyParts.BodyPart bodyPart, string puppetComponentDescription, int movementType, int movementStrength, int damage)
+    public void ApplyPropertiesToUI(GameObject uiObject)
     {
-        this.puppetComponentName = PuppetComponentName;
-        this.puppetComponentDescription = puppetComponentDescription;
-        this.id = id;
-        this.sprite = sprite;
-        this.bodyPart = bodyPart;
-        this.movementType = movementType;
-        this.movementStrength = movementStrength;
-        this.damage = damage;
-
-        gameObject.GetComponent<Image>().sprite = sprite;
+        uiObject.GetComponent<Image>().sprite = sprite;
     }
+
 }

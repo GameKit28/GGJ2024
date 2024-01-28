@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - ParticleEmitter
+  - name
+  - description
+  - Slot
   layers:
   - Default
   - TransparentFX
