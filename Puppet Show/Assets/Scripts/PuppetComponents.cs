@@ -17,4 +17,6 @@ public class PuppetComponents : MonoBehaviour
     {
         uiObject.GetComponent<Image>().sprite = sprite;
     } 
+
+    
 }
