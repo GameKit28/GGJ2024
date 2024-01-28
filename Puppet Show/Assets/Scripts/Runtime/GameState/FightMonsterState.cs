@@ -6,20 +6,9 @@ using UnityEngine.SceneManagement;
 
 public partial class GameStateFSM : MeFsm 
 {
-    public class FightMonsterState : MeFsmState<GameStateFSM>
+    public class FightMonsterState : SceneLoadingState
     {
-        string scene = "SampleScene";
-
-        protected override void EnterState()
-        {
-            if(SceneManager.GetActiveScene().name != scene) 
-            {
-                SceneManager.LoadScene(scene);
-            }
-        }
-        
-
-
+        protected override string sceneToLoad => "SampleScene";
     }
 }
 

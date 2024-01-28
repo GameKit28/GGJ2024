@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using MeEngine.FsmManagement;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public partial class GameStateFSM : MeFsm 
 {
-    public class GameOverState : MeFsmState<GameStateFSM>
+    public class GameOverState : SceneLoadingState
     {
-        string scene = "GameOver";
+        protected override string sceneToLoad => "GameOver";
 
-        protected override void EnterState()
+        protected override void OnSceneLoaded()
         {
-            if(SceneManager.GetActiveScene().name != scene) 
-            {
-                SceneManager.LoadScene(scene);
-            }
+            GameObject.Find("Main Menu").GetComponent<Button>().onClick.AddListener(OnMainMenuClicked);
+        }
+
+        private void OnMainMenuClicked(){
+            SwapState<MainMenuState>();
         }
     }
 }

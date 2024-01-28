@@ -2,6 +2,7 @@ using UnityEngine;
 using MeEngine.FsmManagement;
 using System.Collections;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public partial class GameStateFSM : MeFsm
 {
@@ -14,6 +15,33 @@ public partial class GameStateFSM : MeFsm
             base.Awake();
         }else{
             GameObject.Destroy(this);
+        }
+    }
+
+    public abstract class SceneLoadingState : MeFsmState<GameStateFSM> 
+    {
+        protected abstract string sceneToLoad { get;}
+
+        protected override void EnterState()
+        {
+            if(SceneManager.GetActiveScene().name != sceneToLoad) 
+            {
+                SceneManager.sceneLoaded += OnSceneLoadedEvent;
+                SceneManager.LoadScene(sceneToLoad);
+            }else{
+                OnSceneLoaded();
+            }
+        }
+
+        private void OnSceneLoadedEvent(Scene scene, LoadSceneMode mode){
+            OnSceneLoaded();
+        }
+
+        protected virtual void OnSceneLoaded(){}
+
+        protected override void ExitState()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoadedEvent;
         }
     }
 
