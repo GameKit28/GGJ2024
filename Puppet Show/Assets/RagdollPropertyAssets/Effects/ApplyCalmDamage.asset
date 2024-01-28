@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f13a783f4adcaf45b1b70d4e6a7c34a, type: 3}
   m_Name: ApplyCalmDamage
   m_EditorClassIdentifier: 
-  damageType: 0
-  damageAmmount: 10
+  damageType: 2
+  damageAmount: 10
