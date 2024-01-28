@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Monocle
   m_EditorClassIdentifier: 
   puppetComponentName: Monocle
-  puppetComponentDescription: 
+  puppetComponentDescription: Calms 20 when still
   bodyPart: 0
   sprite: {fileID: 21300000, guid: a7f77a01db525c143bb127975046c865, type: 3}
   validMovementBehaviours:
@@ -21,6 +21,6 @@ MonoBehaviour:
   validTriggerBehaviours:
   - {fileID: 11400000, guid: 50d0bfb1258592649b5b91f558f8eb9b, type: 2}
   validEffectBehaviours:
-  - {fileID: 11400000, guid: 7cf61d2b68a57004a907087277c3326a, type: 2}
+  - {fileID: 11400000, guid: 1077965767a899241bf01dc028394471, type: 2}
   constantModifiers: []
   percentageModifiers: []

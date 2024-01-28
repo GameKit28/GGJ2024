@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rose
   m_EditorClassIdentifier: 
   puppetComponentName: Rose
-  puppetComponentDescription: 
+  puppetComponentDescription: Calms 5 when still
   bodyPart: 3
   sprite: {fileID: 21300000, guid: 00d119473a9b92841a360b41223f2b7b, type: 3}
   validMovementBehaviours:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tambarine
   m_EditorClassIdentifier: 
   puppetComponentName: Tambarine
-  puppetComponentDescription: Shake Shake
+  puppetComponentDescription: Irratates 5 when shaken
   bodyPart: 3
   sprite: {fileID: 21300000, guid: 80af69ddeeab6264591242501c9b331b, type: 3}
   validMovementBehaviours:

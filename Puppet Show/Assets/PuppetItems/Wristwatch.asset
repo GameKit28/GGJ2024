@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wristwatch
   m_EditorClassIdentifier: 
   puppetComponentName: Wristwatch
-  puppetComponentDescription: 
+  puppetComponentDescription: Irrates 10 when pointing down
   bodyPart: 2
   sprite: {fileID: 21300000, guid: edc29b3a6b24deb48b9b205d844ca243, type: 3}
   validMovementBehaviours:
