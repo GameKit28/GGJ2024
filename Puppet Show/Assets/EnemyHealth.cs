@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 
@@ -19,6 +20,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] private GameObject damageIndicatorPrefab;
     [SerializeField] private Transform damageIndicatorOrigin;
 
+    [Header("Time Dialation")]
+    [SerializeField] private float dialationTime;
+    [SerializeField] private AnimationCurve dialationEffectOverTime;
 
 
     private void Update()
@@ -51,6 +55,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     }
     private void DamageEnemy(float ammount, ref float healthPool, Color textColor)
     {
+        StartCoroutine(WarpTime());
         healthPool -= Mathf.Abs(ammount);
         GameObject newIndicator = Instantiate(damageIndicatorPrefab);
         TextMeshPro text = newIndicator.GetComponent<TextMeshPro>();
@@ -63,5 +68,25 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             Debug.Log("Dead");
             //Insert Death Logic Here
         }
+    }
+    
+    private IEnumerator WarpTime()
+    {
+        float timer = 0;
+        float timeScale = 1;
+        while(timer < dialationTime)
+        {
+            timer += Time.deltaTime;
+            timeScale = dialationEffectOverTime.Evaluate(timer / dialationTime);
+            if(timeScale < 0.1f)
+            {
+                timeScale = 0.1f;
+            }
+            Debug.Log(timeScale);
+            Time.timeScale = timeScale;
+            yield return new WaitForEndOfFrame();
+        }
+        Time.timeScale = 1.0f;
+        
     }
 }
