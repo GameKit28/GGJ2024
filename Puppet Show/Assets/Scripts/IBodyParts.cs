@@ -15,4 +15,15 @@ public interface IBodyParts
         Left,
         Right
     }
+
+    public enum InventoryBodyParts
+    {
+        Head,
+        LeftShoulder,
+        RightShoulder,
+        LeftHand,
+        RightHand,
+        LeftForearm,
+        RightForearm
+    }
 }

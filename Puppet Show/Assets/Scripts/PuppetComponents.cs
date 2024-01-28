@@ -16,6 +16,5 @@ public class PuppetComponents : MonoBehaviour
     public void ApplyPropertiesToUI(GameObject uiObject)
     {
         uiObject.GetComponent<Image>().sprite = sprite;
-    }
-
+    } 
 }

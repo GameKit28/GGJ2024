@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puppetComponentName: Sword
   puppetComponentDescription: Sharp! Uh oh!
-  bodyPart: 3
+  bodyPart: 1
   sprite: {fileID: 21300000, guid: 17efdc2c68d4e1c4cb06b8b877c87b20, type: 3}
   validMovementBehaviours:
   - {fileID: 11400000, guid: 95552199da3635241be36cfea717df02, type: 2}
