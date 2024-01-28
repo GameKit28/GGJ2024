@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Dictionary<IBodyParts.BodyPart, PuppetComponents> itemByBodyParts = new Dictionary<IBodyParts.BodyPart, PuppetComponents>();
 
-    // Update is called once per frame
-    void Update()
+    public static Inventory Instance;
+    private void Start()
     {
-        
+        GameObject.DontDestroyOnLoad(this);
+        Instance = this;
+    }
+    public void AddPuppetComponent(PuppetComponents item)
+    {
+        itemByBodyParts[item.bodyPart] = item;
+        Debug.Log(itemByBodyParts.Count);
+    }
+    public void RemovePuppetComponent()
+    {
+
     }
 }

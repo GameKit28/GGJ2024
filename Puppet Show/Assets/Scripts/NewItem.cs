@@ -39,17 +39,12 @@ public class NewItem : MonoBehaviour, IBodyParts, IPointerEnterHandler
 
         //code for finding the text reference
         nameUI = GameObject.FindWithTag("name");
-        Debug.Log(nameUI);
         descriptionUI = GameObject.FindWithTag("description");
-        nameTextComponent = nameUI.GetComponent<TMPro.TextMeshProUGUI>();
-        
-        Debug.Log(nameTextComponent);
-        
+        nameTextComponent = nameUI.GetComponent<TMPro.TextMeshProUGUI>();  
         descriptionTextComponent = descriptionUI.GetComponent<TMPro.TextMeshProUGUI>();
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("is hover");
         nameTextComponent.text = nameValue;
         descriptionTextComponent.text = descriptionValue;
     }
