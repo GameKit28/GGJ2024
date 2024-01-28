@@ -30,8 +30,8 @@ public class StickController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if (collision.collider.gameObject.tag == "EnemyProjectile")
+        string tag = collision.collider.gameObject.tag;
+        if (tag == "EnemyProjectile" || tag == "Enemy")
         {
             GameStateFSM.Instance.OnPlayerDeath();
         }

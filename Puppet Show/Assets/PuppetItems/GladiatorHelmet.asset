@@ -16,8 +16,11 @@ MonoBehaviour:
   puppetComponentDescription: For SPARTA!
   bodyPart: 0
   sprite: {fileID: 21300000, guid: 02d9e178fc32d92458948c7ff5dcf2ea, type: 3}
-  validMovementBehaviours: []
-  validTriggerBehaviours: []
-  validEffectBehaviours: []
+  validMovementBehaviours:
+  - {fileID: 11400000, guid: 0c0ee07000c9acd41a976d294c41ccdf, type: 2}
+  validTriggerBehaviours:
+  - {fileID: 11400000, guid: e137944e35019be4ba803d36f43c038a, type: 2}
+  validEffectBehaviours:
+  - {fileID: 11400000, guid: 67b5f6f10344dcb49a0a304f1d6ee01d, type: 2}
   constantModifiers: []
   percentageModifiers: []
