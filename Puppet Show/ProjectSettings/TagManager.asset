@@ -10,6 +10,8 @@ TagManager:
   - description
   - Slot
   - EnemySpawner
+  - EnemyProjectile
+  - Curtains
   layers:
   - Default
   - TransparentFX

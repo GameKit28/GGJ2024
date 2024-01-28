@@ -8,6 +8,7 @@ public partial class GameStateFSM : MeFsm
 {
     public class GameOverState : MeFsmState<GameStateFSM>
     {
+<<<<<<< Updated upstream
         string scene = "GameOver";
 
         protected override void EnterState()
@@ -16,6 +17,12 @@ public partial class GameStateFSM : MeFsm
             {
                 SceneManager.LoadScene(scene);
             }
+=======
+        protected override void EnterState()
+        {
+            base.EnterState();
+            
+>>>>>>> Stashed changes
         }
     }
 }
