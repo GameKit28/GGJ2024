@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] private float calm;
     [SerializeField] private float dazzle;
     [SerializeField] private float irritate;
+    [SerializeField] private HealthBarRenderer healthBarRenderer;
     [SerializeField] private GameObject damageIndicatorPrefab;
     [SerializeField] private Transform damageIndicatorOrigin;
 
@@ -19,7 +20,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] private float dialationTime;
     [SerializeField] private AnimationCurve dialationEffectOverTime;
 
-
+    private void Start()
+    {
+        healthBarRenderer.SetupRenderer(this);
+    }
     private void Update()
     {
 
@@ -28,6 +32,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public void DealDamage(float damageAmmount, IDamageable.DamageType damageType)
     {
         Color color = IDamageable.GetColor(damageType);
+        Debug.Log(color);
         switch (damageType)
         {
             
@@ -84,5 +89,16 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         }
         Time.timeScale = 1.0f;
         
+    }
+
+    public float[] getHealthBars()
+    {
+        float[] healthBars = new float[5];
+        healthBars[0] = intimidate;
+        healthBars[1] = disgust;
+        healthBars[2] = calm;
+        healthBars[3] = dazzle;
+        healthBars[4] = irritate;
+        return healthBars;
     }
 }

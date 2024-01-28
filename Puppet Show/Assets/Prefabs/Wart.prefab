@@ -75,18 +75,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb4fee4e1ae5034a8d03dd474f6a32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intimidate: 1000
+  intimidate: 900
   disgust: 1000
-  calm: 1000
-  dazzle: 1000
-  irritate: 1000
-  intimidateColor: {r: 1, g: 0.9223727, b: 0.025157154, a: 1}
-  disgustColor: {r: 0.20481022, g: 0.7735849, b: 0.16542059, a: 1}
-  calmColor: {r: 0, g: 0.13124967, b: 1, a: 1}
-  dazzleColor: {r: 1, g: 0.34591186, b: 0.88787055, a: 1}
-  irritateColor: {r: 0.8490566, g: 0, b: 0, a: 1}
+  calm: 800
+  dazzle: 300
+  irritate: 500
+  healthBarRenderer: {fileID: 0}
   damageIndicatorPrefab: {fileID: 4876658656486663455, guid: 96b8f6319f766684395cfb5d82abb33c, type: 3}
   damageIndicatorOrigin: {fileID: 6456926466299715058}
+  dialationTime: 0.15
+  dialationEffectOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.0000132
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5025599
+      value: 0.064195395
+      inSlope: 0.0034367358
+      outSlope: 0.0034367358
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.30666426
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.999566
+      value: 1.0002747
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &116356445933181177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,9 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c877ba6428693484e808eebe148f3b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveVelocity: {x: -0.76, y: 6.59}
-  timeBetweenMovements: 4
-  timeBetweenMovementsVariability: 1
+  moveVelocity: {x: -0.58, y: 6.59}
+  timeBetweenMovements: 8
+  timeBetweenMovementsVariability: 3
   gravity: -16
 --- !u!212 &2895401449089297956
 SpriteRenderer:
