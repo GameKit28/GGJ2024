@@ -24,6 +24,8 @@ public class ItemRandomizer : MonoBehaviour, IPointerEnterHandler
         
         componentInstance.puppetComponentName = chosenItem.puppetComponentName;
         componentInstance.puppetComponentDescription = chosenItem.puppetComponentDescription;
+        Debug.Log("This is the " + chosenItem.puppetComponentName);
+        Debug.Log(chosenItem.validTriggerBehaviours);
         componentInstance.bodyPart = chosenItem.bodyPart;
         componentInstance.sprite = chosenItem.sprite;
         componentInstance.movementStrategy = GetRandom(chosenItem.validMovementBehaviours);
