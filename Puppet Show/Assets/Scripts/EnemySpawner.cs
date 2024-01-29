@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private float strength;
-    [SerializeField] private bool spawn;
+    [SerializeField] public bool spawn;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject healthBarBannersPrefab;
 
@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
             spawn= false;
             //scale the strength of the enemy based on time elapsed since the game was launched
 
-            GenerateEnemy(strength + Time.timeSinceLevelLoad / 10f);
+            GenerateEnemy(strength);
         }
     }
     public void GenerateEnemy(float strengthModifier)

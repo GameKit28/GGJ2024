@@ -66,7 +66,8 @@ public partial class GameStateFSM : MeFsm
             yield return new WaitForEndOfFrame();
         }
         spawner.RemoveEnemy();
-        SwapState<MonsterDefeatedState>();
+        spawner.spawn = true;
+        //SwapState<MonsterDefeatedState>();
     }
     private IEnumerator WaitAndDestroy<SType>(GameObject obj, EnemySpawner spawner, float time) where SType : MeEngine.FsmManagement.MeFsmStateBase
     {

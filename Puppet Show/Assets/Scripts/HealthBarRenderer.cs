@@ -18,6 +18,7 @@ public class HealthBarRenderer : MonoBehaviour
     private int highestHealthIndex;
     private float[] healthBars;
     private bool rendererSetup = false;
+
     // Start is called before the first frame update
 
     private void Update()
@@ -55,11 +56,11 @@ public class HealthBarRenderer : MonoBehaviour
 
     private void RenderHealthBars()
     {
-        intimidateBar.size = new Vector2(2f, maxBannerHeight * (healthBars[0] / healthBars[highestHealthIndex]));
-        disgustBar.size = new Vector2(2f, maxBannerHeight * (healthBars[1] / healthBars[highestHealthIndex]));
-        calmBar.size = new Vector2(2f, maxBannerHeight * (healthBars[2] / healthBars[highestHealthIndex]));
-        dazzleBar.size = new Vector2(2f, maxBannerHeight * (healthBars[3] / healthBars[highestHealthIndex]));
-        irritateBar.size = new Vector2(2f, maxBannerHeight * (healthBars[4] / healthBars[highestHealthIndex]));
+        intimidateBar.size = new Vector2(2f, maxBannerHeight * (healthBars[0] / highestHealth));
+        disgustBar.size = new Vector2(2f, maxBannerHeight * (healthBars[1] / highestHealth));
+        calmBar.size = new Vector2(2f, maxBannerHeight * (healthBars[2] / highestHealth));
+        dazzleBar.size = new Vector2(2f, maxBannerHeight * (healthBars[3] / highestHealth));
+        irritateBar.size = new Vector2(2f, maxBannerHeight * (healthBars[4] / highestHealth));
     }
 
 }
