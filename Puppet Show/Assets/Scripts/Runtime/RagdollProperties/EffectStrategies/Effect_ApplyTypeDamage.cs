@@ -16,18 +16,7 @@ public class Effect_ApplyTypeDamage : EffectStrategy
 
     public override void Initialize(GameObject gameObject)
     {
-        if (enemyHealth == null)
-        {
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            if (enemies.Length > 0)
-            {
-                enemyHealth = enemies[0].GetComponent<EnemyHealth>();
-            }
-            else
-            {
-                enemyPresent = false;
-            }
-        }
+        
 
         if (particleIndicators == null)
         {
@@ -75,9 +64,21 @@ public class Effect_ApplyTypeDamage : EffectStrategy
 
     public override void ActivateOnTick(GameObject gameObject)
     {
+        if (enemyHealth == null)
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            if (enemies.Length > 0)
+            {
+                enemyHealth = enemies[0].GetComponent<EnemyHealth>();
+            }
+            else
+            {
+                enemyPresent = false;
+            }
+        }
         if (enemyPresent)
         {
-            enemyHealth.DealDamage(modifiedDamage, damageType);
+            enemyHealth.DealDamage(20, damageType);
         }
 
         if (particleEmitterPresent)

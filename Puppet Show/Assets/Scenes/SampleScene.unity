@@ -12717,7 +12717,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -13837,7 +13837,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1735375183102549396, guid: 443e14b73f4827e4fb9dafa03afb1a6d, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2062226279212311862, guid: 443e14b73f4827e4fb9dafa03afb1a6d, type: 3}
       propertyPath: m_Name
@@ -13845,7 +13845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2062226279212311862, guid: 443e14b73f4827e4fb9dafa03afb1a6d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7485165130005505376, guid: 443e14b73f4827e4fb9dafa03afb1a6d, type: 3}
       propertyPath: m_RootOrder
@@ -13853,7 +13853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7485165130005505376, guid: 443e14b73f4827e4fb9dafa03afb1a6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.6
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 7485165130005505376, guid: 443e14b73f4827e4fb9dafa03afb1a6d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25267,7 +25267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 2
-  spawn: 0
+  spawn: 1
   enemyPrefab: {fileID: 5868569313265908190, guid: 11acbf28fa0d2554db547b9d56eef90d, type: 3}
   healthBarBannersPrefab: {fileID: 2227217256754281353, guid: b43a840f5e0a9414c8c7af0b558dce36, type: 3}
   enemies:
