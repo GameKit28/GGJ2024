@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2631ea5237f88664f8a6417470f0b4f4, type: 3}
   m_Name: Shrimp
   m_EditorClassIdentifier: 
-  startingPos: {x: 14.74, y: 1.11}
+  startingPos: {x: 13, y: 1.11}
   damageIndicatorPosition: {x: -9, y: -2.5}
   projectileSpawnerPosition: {x: 8.87, y: -1.96}
   hitBoxSize: {x: 0, y: 0}

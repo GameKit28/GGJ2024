@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81d4462c38f64f42939f9aa9df5a676, type: 3}
   m_Name: PointingRight
   m_EditorClassIdentifier: 
-  targetAngle: 0
+  targetAngle: 90
   tolerance: 10
